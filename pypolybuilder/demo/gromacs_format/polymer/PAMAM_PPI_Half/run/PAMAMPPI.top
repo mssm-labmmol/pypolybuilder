@@ -1,0 +1,31 @@
+; Include forcefield parameters
+#include "../../../../../../gromos2016h66.ff/forcefield.itp"
+
+;[ moleculetype ]
+; Name            nrexcl
+;PAMAM_PPI             2
+
+; Include Pamam topology
+#include "PAMAMPPI.itp"
+
+; Include water topology
+#include "../../../../../../gromos2016h66.ff/spc.itp"
+
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       5000       5000       5000
+#endif
+
+; Include generic topology for ions
+#include "../../../../../../gromos2016h66.ff/ions.itp"
+
+[ system ]
+; Name
+PAMAMPPI in water
+
+[ molecules ]
+; Compound        #mols
+PAMPPI				1

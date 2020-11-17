@@ -1,0 +1,21 @@
+Ä}q(U	collectorqUcoverage v3.7.1qUlinesq}q(U&/home/vitor/dendribuilder/dendrimer.pyq]q(KKKK	K
+KKKKKKKKKKKKKK!K*K8KOeU</home/vitor/dendribuilder/tests/buildingBlockFactoryTests.pyq]q	(KKKKKKKKK	K
+KKKKKKKKKKKKeU"/home/vitor/dendribuilder/utils.pyq
+]q(KKKK	KKKKKKKKKKKKKKKKKKKK5eU//home/vitor/dendribuilder/tests/polymerTests.pyq]q(KKKKKKKKK	KKKKKKKKKKKKeU*/home/vitor/dendribuilder/tests/testEnv.pyq]q(KKKKKKKK	K
+KeU,/home/vitor/dendribuilder/tests/bondTests.pyq]q(KKKKKKKK
+KKKKKKKKKKKKKKKKK K"K#K$eU#/home/vitor/dendribuilder/branch.pyq]q(KKKK	KKKKKK K!eU$/home/vitor/dendribuilder/polymer.pyq]q(KKKK	K
+KKKKKKKKKKK K!K"K#K$K%K&K'K(K)K*K+K,K-K/K0K1K2K3K4K6K9K:K;K<K>K?K@KAKBKDKEKFKGKIKWKXKYKZK[K\K]K^K_K`eU%/home/vitor/dendribuilder/dihedral.pyq]q(KKKK	KKKKKKKKK"K;KAKGKUKXK[K_KbKfKjKnKrKvKyK}KÅKÑKÖKÜKáKàKâeU5/home/vitor/dendribuilder/tests/buildingBlockTests.pyq]q(KKKKKKKKK
+KKKKeU)/home/vitor/dendribuilder/angle_params.pyq]q(KKKK	K
+KKKKKKKKKKKKKK K#K'K+K/K3K7K;K?KBKCKDKEeU'/home/vitor/dendribuilder/exclusions.pyq]q(KKK
+KKKKKKK eU(/home/vitor/dendribuilder/bond_params.pyq]q(KKKK	K
+KKKKKKKKKKKK#K'K+K/K3K6K7K8eU'/home/vitor/dendribuilder/connection.pyq ]q!(KKKKKKeU!/home/vitor/dendribuilder/atom.pyq"]q#(KKKK	K
+KKKKKKKKKKKKKKKKKKKKK K!K"K#K$K%K&K'K(K*K.K8K<K@KDKHKLKPKTKYK`KaKdKhKkKoKsKwK{KKÄKÉKáKãKåKèKìKóKõKüK¢K¶K™K≠K±K¥KµK∂K∑K∏KπK∫KªKºKΩKæeU /home/vitor/dendribuilder/itp.pyq$]q%(KKKKK	K
+KKKKKKKKKKKKKK%K0K>KKKQKbKiK{KKÖKÜKáKàKâKãKêKòKùKûK°K¢K•K¶K©K™K≠KÆK±K≤KµK∂KπK∫KºKΩK¿K¡K√KƒK≈K∆K«eU(/home/vitor/dendribuilder/dihe_params.pyq&]q'(KKKK	K
+KKKKKKKKKKKK"K&K*K.K2K6K:K>KBKFKJKNKRKUKVKWKXKYeU1/home/vitor/dendribuilder/BuildingBlockFactory.pyq(]q)(KKKKK	K
+KKKKKKKKKKKKK!K&K'K)K*K,K2K3K5K7eU-/home/vitor/dendribuilder/tests/dendritest.pyq*]q+(KKKKKKKKK	K
+KKKKKKKeU&/home/vitor/dendribuilder/ff_params.pyq,]q-(KKKKK
+KKKKKKKKKKKKKKKKK"K&K'K(K)K*K+K,K/K0K1K4K5K7K8K9K<K=K?K@KAKBKDKEKGKHKIKKKLKNKOKPKQKRKSKUKVKWKYKZK\K]K^K_KaKcKdKeKfKgKhKiKjKkKlKmKnKoKqKrKsKtKuKvKxKyKzK{K|K}KKÅKÇKÉKÜKáKàKâKéeU-/home/vitor/dendribuilder/tests/angleTests.pyq.]q/(KKKKKKKK
+KKKKKKKKKKKKKKKeU*/home/vitor/dendribuilder/BuildingBlock.pyq0]q1(KKKKK	K
+KKKKKKKKKKKKKK!K#K$K&K'K)K*K-K0K4K7K8K:K;K<K=K?K@KBKDKEKGKHKIKJKKKMKNKPKSKTKUKVKWKXKYKZK[K]K`KbKsKÑKëeU"/home/vitor/dendribuilder/angle.pyq2]q3(KKKK	K
+KKKKKKKKKKKKKKKK!K#K%K&K,K1K3K5K6K7K8K9K:K;K=K@KAKDKEKHKIKLKPKQKTKXK\K`KdKgKhKiKjKkeU!/home/vitor/dendribuilder/bond.pyq4]q5(KKKK	K
+KKKKKKKKKKKKKKK"K#K&K'K*K.K2K6K:K>KAKBKCKDKEKGKIKJKKKOKRKSKTKUeuu.

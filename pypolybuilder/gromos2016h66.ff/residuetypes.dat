@@ -1,0 +1,313 @@
+;
+; residues of the GROMOS 2016H66 force field
+;
+; from file: 2016h66.mtb (small species, flexible solvents/ions)
+;
+CH4      Molecule     ; methane (united atom)
+AR       Molecule     ; argon
+SO42-    Molecule     ; SO_4^-- ion (charge -2e)
+H2O      Molecule     ; water (SPC model)
+H2OE     Molecule     ; water (SPC-E model)
+CHCL3    Molecule     ; chloroform
+DMSO     Molecule     ; dimethylsulfoxide
+CH3OH    Molecule     ; methanol
+CCL4     Molecule     ; carbontetrachloride
+TFE      Molecule     ; 2,2,2-trifluoroethanol
+UREA     Molecule     ; urea
+;
+; from file: 2016h66.mtb (rigid ions)
+;
+ZN2+     Ion          ; zinc ion (charge +2e)
+NA+      Ion          ; sodium ion (charge +e; version 53A6)
+CL-      Ion          ; chloride ion (charge -e; version 53A6)
+LLI+     Ion          ; lithium ion (charge +e; version 2016H66)
+LNA+     Ion          ; sodium ion (charge +e; version 2016H66)
+LK+      Ion          ; potassium ion (charge +e; version 2016H66)
+LRB+     Ion          ; rubidium ion (charge +e; version 2016H66)
+LCS+     Ion          ; cesium ion (charge +e; version 2016H66)
+LF-      Ion          ; fluoride ion (charge -e; version 2016H66)
+LCL-     Ion          ; chloride ion (charge -e; version 2016H66)
+LBR-     Ion          ; bromide ion (charge -e; version 2016H66)
+LI-      Ion          ; iodide ion (charge -e; version 2016H66)
+CA2+     Ion          ; calcium ion (charge +2e)
+MG2+     Ion          ; magnesium ion (charge +2e)
+CU1+     Ion          ; copper ion (charge +e)
+CU2+     Ion          ; copper ion (charge +2e)
+;
+; from file: 2016h66.mtb (rigid solvents)
+;
+H2O      Solvent      ; water (SPC model)
+H2OE     Solvent      ; water (SPC-E model)
+CHCL3    Solvent      ; chloroform
+DMSO     Solvent      ; dimethylsulfoxide
+CH3OH    Solvent      ; methanol
+CCL4     Solvent      ; carbontetrachloride
+;
+; from file: 2016h66_orga.mtb
+;
+CHE      Molecule     ; cyclohexane
+MTL      Molecule     ; methanol
+ETL      Molecule     ; ethanol
+1PL      Molecule     ; 1-propanol
+2PL      Molecule     ; 2-propanol
+BTL      Molecule     ; 1-butanol
+PTL      Molecule     ; 1-pentanol
+HXL      Molecule     ; 1-hexanol
+HPL      Molecule     ; 1-heptanol
+OTL      Molecule     ; 1-octanol
+2BTL     Molecule     ; 2-butanol
+2PTL     Molecule     ; 2-pentanol
+3PTL     Molecule     ; 3-pentanol
+CHXL     Molecule     ; cyclohexanol
+2M2P     Molecule     ; 2-methyl-2-propanol
+2M2B     Molecule     ; 2-methyl-2-butanol
+DME      Molecule     ; dimethylether
+DEE      Molecule     ; diethylether
+MPH      Molecule     ; methylpropylether
+DXE      Molecule     ; 1,2-dimethoxyethane
+EAL      Molecule     ; ethanal
+PAL      Molecule     ; propanal
+BAL      Molecule     ; butanal
+PPN      Molecule     ; propanone
+BTN      Molecule     ; butanone
+2PN      Molecule     ; 2-pentanone
+3PN      Molecule     ; 3-pentanone
+2HN      Molecule     ; 2-hexanone
+3HN      Molecule     ; 3-hexanone
+ACA      Molecule     ; acetic acid
+PPA      Molecule     ; propanoic acid
+BTA      Molecule     ; butanoic acid
+EAE      Molecule     ; ethylacetate
+MPE      Molecule     ; methylpropanoate
+PAE      Molecule     ; propylacetate
+BAE      Molecule     ; butylacetate
+EAN      Molecule     ; ethylamine
+PAN      Molecule     ; propylamine
+BAN      Molecule     ; butylamine
+DEAN     Molecule     ; diethylamine
+TEAN     Molecule     ; triethylamine
+EDAN     Molecule     ; ethylenediamine
+LNMA     Molecule     ; N-methylacetamide
+AMD      Molecule     ; acetamide
+DAMD     Molecule     ; dimethylacetamide
+ETSH     Molecule     ; ethanethiol
+PRSH     Molecule     ; propanethiol
+BTSH     Molecule     ; butanethiol
+DES      Molecule     ; diethylsulfide
+DMDS     Molecule     ; dimethyldisulfide
+DMS      Molecule     ; dimethylsulfide
+EMS      Molecule     ; ethylmethylsulfide
+BZN      Molecule     ; benzene
+TOL      Molecule     ; toluene
+PHL      Molecule     ; phenol
+PHT      Molecule     ; parahydroxytoluene
+ANLN     Molecule     ; aniline
+PYRI     Molecule     ; pyridine
+MADE     Molecule     ; 9-methyl-adenine
+MGUA     Molecule     ; 9-methyl-guanine
+MTHY     Molecule     ; 1-methyl-thymine
+MCYT     Molecule     ; 1-methyl-cytosine
+MURA     Molecule     ; 1-methyl-uracyl
+;
+; from file: 2016h66_pept.mtb
+;
+ALA      Protein      ; alanine
+ARG      Protein      ; arginine (protonated; charge +e)
+ARGN     Protein      ; arginine (deprotonated; neutral)
+ASN      Protein      ; asparagine
+ASN1     Protein      ; asparagine (coordinated with ZN)
+ASP      Protein      ; aspartic acid (deprotonated; charge -e)
+ASPH     Protein      ; aspartic acid (protonated; neutral)
+CYS      Protein      ; cysteine (deprotonated; charge -0.5e)
+CYSH     Protein      ; cysteine (protonated; neutral)
+CYS1     Protein      ; cysteine (1st member of S-S bridge)
+CYS2     Protein      ; cysteine (2nd member of S-S bridge)
+GLN      Protein      ; glutamine
+GLU      Protein      ; glutamic acid (deprotonated; charge -e)
+GLUH     Protein      ; glutamic acid (protonated; neutral)
+GLY      Protein      ; glycine
+HISA     Protein      ; histidine (protonated at ND1; neutral)
+HISB     Protein      ; histidine (protonated at NE2; neutral)
+HISH     Protein      ; histidine (protonated at ND1 and NE2; charge +e)
+HIS1     Protein      ; histidine (coupled to HEME at NE2; neutral)
+HIS2     Protein      ; histidine (coupled to HEMC at NE2: neutral)
+HYP      Protein      ; hydroxyproline
+ILE      Protein      ; isoleucine
+LEU      Protein      ; leucine
+LYS      Protein      ; lysine (deprotonated; neutral)
+LYSH     Protein      ; lysine (protonated; charge +e)
+MET      Protein      ; methionine
+PHE      Protein      ; phenylalanine
+PRO      Protein      ; proline
+SER      Protein      ; serine
+THR      Protein      ; threonine
+TRP      Protein      ; tryptophan
+TYR      Protein      ; tyrosine
+VAL      Protein      ; valine
+DALA     Protein      ; D-alanine
+ABU      Protein      ; L-2-amino-butanoic acid
+AIB      Protein      ; 2-aminoisobutyric acid
+MEBMT    Protein      ; (4R)-4-[(E)-2-butanyl]-4,N-dimethyl-L-threonine
+MELEU    Protein      ; N-methyl-L-leucine
+MEVAL    Protein      ; N-methyl-L-valine
+SAR      Protein      ; sarcosine or N-methylglycine
+;
+; from file: 2016h66_nucl.mtb
+;
+DADE     DNA          ; 2-deoxyadenosine 5-phosphoric acid (DNA, charge -e)
+DGUA     DNA          ; 2-deoxyguanosine 5-phosphoric acid (DNA, charge -e)
+DCYT     DNA          ; 2-deoxycitidine 5-phosphoric acid (DNA, charge -e)
+DTHY     DNA          ; 2-deoxythymidine 5-phosphoric acid (DNA, charge -e)
+ADE      RNA          ; adenosine 5-phosphoric acid (RNA, charge -e)
+GUA      RNA          ; guanosine 5-phosphoric acid (RNA, charge -e)
+CYT      RNA          ; cytidine 5-phosphoric acid (RNA, charge -e)
+URA      RNA          ; uridine 5-phosphoric acid (RNA, charge -e)
+;
+; from file: 2016h66_lipi.mtb
+;
+DPPC     Molecule     ; dipalmitoylphosphatidylcholine
+RGMP     Molecule     ; R-glycerol-1-monopalmitate
+SGMP     Molecule     ; S-glycerol-1-monopalmitate
+RGDP2    Molecule     ; R-glycerol-1,2-dipalmitate
+SGDP2    Molecule     ; S-glycerol-1,2-dipalmitate
+GDP3     Molecule     ; glycerol-1,3-dipalmitate
+;
+; from file: 2016h66_carb.mtb
+;
+ACYD     Molecule     ; alpha-cyclodextrin
+BCYD     Molecule     ; beta-cyclodextrin
+GCYD     Molecule     ; gamma-cyclodextrin
+NA2P     Carbohydrate ; -2-D-allopyranose-alpha-1-
+NA3P     Carbohydrate ; -3-D-allopyranose-alpha-1-
+NA4P     Carbohydrate ; -4-D-allopyranose-alpha-1-
+NA6P     Carbohydrate ; -6-D-allopyranose-alpha-1-
+NB2P     Carbohydrate ; -2-D-allopyranose-beta-1-
+NB3P     Carbohydrate ; -3-D-allopyranose-beta-1-
+NB4P     Carbohydrate ; -4-D-allopyranose-beta-1-
+NB6P     Carbohydrate ; -6-D-allopyranose-beta-1-
+EA2P     Carbohydrate ; -2-D-altropyranose-alpha-1-
+EA3P     Carbohydrate ; -3-D-altropyranose-alpha-1-
+EA4P     Carbohydrate ; -4-D-altropyranose-alpha-1-
+EA6P     Carbohydrate ; -6-D-altropyranose-alpha-1-
+EB2P     Carbohydrate ; -2-D-altropyranose-beta-1-
+EB3P     Carbohydrate ; -3-D-altropyranose-beta-1-
+EB4P     Carbohydrate ; -4-D-altropyranose-beta-1-
+EB6P     Carbohydrate ; -6-D-altropyranose-beta-1-
+GA2P     Carbohydrate ; -2-D-glucopyranose-alpha-1-
+GA3P     Carbohydrate ; -3-D-glucopyranose-alpha-1-
+GA4P     Carbohydrate ; -4-D-glucopyranose-alpha-1-
+GA6P     Carbohydrate ; -6-D-glucopyranose-alpha-1-
+GB2P     Carbohydrate ; -2-D-glucopyranose-beta-1-
+GB3P     Carbohydrate ; -3-D-glucopyranose-beta-1-
+GB4P     Carbohydrate ; -4-D-glucopyranose-beta-1-
+GB6P     Carbohydrate ; -6-D-glucopyranose-beta-1-
+MA2P     Carbohydrate ; -2-D-mannopyranose-alpha-1-
+MA3P     Carbohydrate ; -3-D-mannopyranose-alpha-1-
+MA4P     Carbohydrate ; -4-D-mannopyranose-alpha-1-
+MA6P     Carbohydrate ; -6-D-mannopyranose-alpha-1-
+MB2P     Carbohydrate ; -2-D-mannopyranose-beta-1-
+MB3P     Carbohydrate ; -3-D-mannopyranose-beta-1-
+MB4P     Carbohydrate ; -4-D-mannopyranose-beta-1-
+MB6P     Carbohydrate ; -6-D-mannopyranose-beta-1-
+KA2P     Carbohydrate ; -2-D-gulopyranose-alpha-1-
+KA3P     Carbohydrate ; -3-D-gulopyranose-alpha-1-
+KA4P     Carbohydrate ; -4-D-gulopyranose-alpha-1-
+KA6P     Carbohydrate ; -6-D-gulopyranose-alpha-1-
+KB2P     Carbohydrate ; -2-D-gulopyranose-beta-1-
+KB3P     Carbohydrate ; -3-D-gulopyranose-beta-1-
+KB4P     Carbohydrate ; -4-D-gulopyranose-beta-1-
+KB6P     Carbohydrate ; -6-D-gulopyranose-beta-1-
+IA2P     Carbohydrate ; -2-D-idopyranose-alpha-1-
+IA3P     Carbohydrate ; -3-D-idopyranose-alpha-1-
+IA4P     Carbohydrate ; -4-D-idopyranose-alpha-1-
+IA6P     Carbohydrate ; -6-D-idopyranose-alpha-1-
+IB2P     Carbohydrate ; -2-D-idopyranose-beta-1-
+IB3P     Carbohydrate ; -3-D-idopyranose-beta-1-
+IB4P     Carbohydrate ; -4-D-idopyranose-beta-1-
+IB6P     Carbohydrate ; -6-D-idopyranose-beta-1-
+LA2P     Carbohydrate ; -2-D-galactopyranose-alpha-1-
+LA3P     Carbohydrate ; -3-D-galactopyranose-alpha-1-
+LA4P     Carbohydrate ; -4-D-galactopyranose-alpha-1-
+LA6P     Carbohydrate ; -6-D-galactopyranose-alpha-1-
+LB2P     Carbohydrate ; -2-D-galactopyranose-beta-1-
+LB3P     Carbohydrate ; -3-D-galactopyranose-beta-1-
+LB4P     Carbohydrate ; -4-D-galactopyranose-beta-1-
+LB6P     Carbohydrate ; -6-D-galactopyranose-beta-1-
+TA2P     Carbohydrate ; -2-D-talopyranose-alpha-1-
+TA3P     Carbohydrate ; -3-D-talopyranose-alpha-1-
+TA4P     Carbohydrate ; -4-D-talopyranose-alpha-1-
+TA6P     Carbohydrate ; -6-D-talopyranose-alpha-1-
+TB2P     Carbohydrate ; -2-D-talopyranose-beta-1-
+TB3P     Carbohydrate ; -3-D-talopyranose-beta-1-
+TB4P     Carbohydrate ; -4-D-talopyranose-beta-1-
+TB6P     Carbohydrate ; -6-D-talopyranose-beta-1-
+nA2P     Carbohydrate ; -2-L-allopyranose-alpha-1-
+nA3P     Carbohydrate ; -3-L-allopyranose-alpha-1-
+nA4P     Carbohydrate ; -4-L-allopyranose-alpha-1-
+nA6P     Carbohydrate ; -6-L-allopyranose-alpha-1-
+nB2P     Carbohydrate ; -2-L-allopyranose-beta-1-
+nB3P     Carbohydrate ; -3-L-allopyranose-beta-1-
+nB4P     Carbohydrate ; -4-L-allopyranose-beta-1-
+nB6P     Carbohydrate ; -6-L-allopyranose-beta-1-
+eA2P     Carbohydrate ; -2-L-altropyranose-alpha-1-
+eA3P     Carbohydrate ; -3-L-altropyranose-alpha-1-
+eA4P     Carbohydrate ; -4-L-altropyranose-alpha-1-
+eA6P     Carbohydrate ; -6-L-altropyranose-alpha-1-
+eB2P     Carbohydrate ; -2-L-altropyranose-beta-1-
+eB3P     Carbohydrate ; -3-L-altropyranose-beta-1-
+eB4P     Carbohydrate ; -4-L-altropyranose-beta-1-
+eB6P     Carbohydrate ; -6-L-altropyranose-beta-1-
+gA2P     Carbohydrate ; -2-L-glucopyranose-alpha-1-
+gA3P     Carbohydrate ; -3-L-glucopyranose-alpha-1-
+gA4P     Carbohydrate ; -4-L-glucopyranose-alpha-1-
+gA6P     Carbohydrate ; -6-L-glucopyranose-alpha-1-
+gB2P     Carbohydrate ; -2-L-glucopyranose-beta-1-
+gB3P     Carbohydrate ; -3-L-glucopyranose-beta-1-
+gB4P     Carbohydrate ; -4-L-glucopyranose-beta-1-
+gB6P     Carbohydrate ; -6-L-glucopyranose-beta-1-
+mA2P     Carbohydrate ; -2-L-mannopyranose-alpha-1-
+mA3P     Carbohydrate ; -3-L-mannopyranose-alpha-1-
+mA4P     Carbohydrate ; -4-L-mannopyranose-alpha-1-
+mA6P     Carbohydrate ; -6-L-mannopyranose-alpha-1-
+mB2P     Carbohydrate ; -2-L-mannopyranose-beta-1-
+mB3P     Carbohydrate ; -3-L-mannopyranose-beta-1-
+mB4P     Carbohydrate ; -4-L-mannopyranose-beta-1-
+mB6P     Carbohydrate ; -6-L-mannopyranose-beta-1-
+kA2P     Carbohydrate ; -2-L-gulopyranose-alpha-1-
+kA3P     Carbohydrate ; -3-L-gulopyranose-alpha-1-
+kA4P     Carbohydrate ; -4-L-gulopyranose-alpha-1-
+kA6P     Carbohydrate ; -6-L-gulopyranose-alpha-1-
+kB2P     Carbohydrate ; -2-L-gulopyranose-beta-1-
+kB3P     Carbohydrate ; -3-L-gulopyranose-beta-1-
+kB4P     Carbohydrate ; -4-L-gulopyranose-beta-1-
+kB6P     Carbohydrate ; -6-L-gulopyranose-beta-1-
+iA2P     Carbohydrate ; -2-L-idopyranose-alpha-1-
+iA3P     Carbohydrate ; -3-L-idopyranose-alpha-1-
+iA4P     Carbohydrate ; -4-L-idopyranose-alpha-1-
+iA6P     Carbohydrate ; -6-L-idopyranose-alpha-1-
+iB2P     Carbohydrate ; -2-L-idopyranose-beta-1-
+iB3P     Carbohydrate ; -3-L-idopyranose-beta-1-
+iB4P     Carbohydrate ; -4-L-idopyranose-beta-1-
+iB6P     Carbohydrate ; -6-L-idopyranose-beta-1-
+lA2P     Carbohydrate ; -2-L-galactopyranose-alpha-1-
+lA3P     Carbohydrate ; -3-L-galactopyranose-alpha-1-
+lA4P     Carbohydrate ; -4-L-galactopyranose-alpha-1-
+lA6P     Carbohydrate ; -6-L-galactopyranose-alpha-1-
+lB2P     Carbohydrate ; -2-L-galactopyranose-beta-1-
+lB3P     Carbohydrate ; -3-L-galactopyranose-beta-1-
+lB4P     Carbohydrate ; -4-L-galactopyranose-beta-1-
+lB6P     Carbohydrate ; -6-L-galactopyranose-beta-1-
+tA2P     Carbohydrate ; -2-L-talopyranose-alpha-1-
+tA3P     Carbohydrate ; -3-L-talopyranose-alpha-1-
+tA4P     Carbohydrate ; -4-L-talopyranose-alpha-1-
+tA6P     Carbohydrate ; -6-L-talopyranose-alpha-1-
+tB2P     Carbohydrate ; -2-L-talopyranose-beta-1-
+tB3P     Carbohydrate ; -3-L-talopyranose-beta-1-
+tB4P     Carbohydrate ; -4-L-talopyranose-beta-1-
+tB6P     Carbohydrate ; -6-L-talopyranose-beta-1-
+GB4U     Carbohydrate ; -4-D-glucuronate-beta-1-
+LA4U     Carbohydrate ; -4-D-galacturonate-alpha-1-
+MB4U     Carbohydrate ; -4-D-mannuronate-beta-1-
+kA4U     Carbohydrate ; -4-L-guluronate-alpha-1
+iA4U     Carbohydrate ; -4-L-iduronate-alpha-1-
+;

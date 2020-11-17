@@ -1,0 +1,3 @@
+#This will create a polymer of generation 0
+
+python3 ../../../../__main__.py --bbs=bb_PPD_B.itp,bb_PPD_I.itp,bb_TCO_I.itp,bb_TCO_E.itp --in=connect-4.in --params=list_param.itp --polymer

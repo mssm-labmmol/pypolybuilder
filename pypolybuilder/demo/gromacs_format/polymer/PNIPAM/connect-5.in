@@ -1,0 +1,16 @@
+# Connectivity file to generate a PNIPAM with 3 monomers
+
+#[ BUILDING BLOCKS ]
+#BBNUM      BBNAME
+  1     	PNIPS
+  2     	PNIP
+  3     	PNIP
+  4	        PNIP
+  5         PNIPE
+
+#[ CONNECTS ]
+#BBI    BBJ   IAT    JAT
+ 1       2     2      1
+ 2       3     2      1
+ 3       4     2      1
+ 4       5     2      1

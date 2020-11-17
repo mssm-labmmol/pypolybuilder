@@ -1,0 +1,19 @@
+#This will create a PAMAM/PPI dendrimer of generation 1
+
+1 - Create a half of the final dendrimer
+python ../pypolybuilder/__main__.py --core=core_PPI.itp --inter=inter_PPI.itp --ter=ter_PPI.itp --params=list_param.itp --ngen=1 --name=PPIhalf --output=PPIhalf.itp
+   
+2 - So open the PPIhalf.itp that was created, delete the [ angles ] and [ dihedrals ] fields and add the [ branches ] and [ exclusions ] camps at the end of file as:
+
+[ branches ]
+;  donor   acceptor
+       0	  9
+       0	 12
+;       0     15
+;       0     18
+       
+[ exclusions ]
+;  ai   aj
+
+3 - Branch the other half
+python ../pypolybuilder/__main__.py --core=PPIhalf.itp --inter=inter_PAMAM.itp --ter=ter_PAMAM.itp --params=list_param.itp --ngen=1 --name=PAMAM_PPI --output=PAMAM_PPI.itp --gro=PAMAM_PPI.gro --optgeo

@@ -1,0 +1,10 @@
+#This will create a PAMAM/PPI dendrimer of generation 1. In which literally each half of the dendrimer is from each dendrimer
+
+#1 - Create a half PAMAM
+python3 ../../../../__main__.py --core=coreHalf_PAMAM.itp --inter=inter_PAMAM.itp --ter=ter_PAMAM.itp --params=list_param.itp --ngen=1 --name=PAMH --output=PAMAMhalf.itp --nogeom
+
+#2 -Create a half PPI
+python3 ../../../../__main__.py --core=coreHalf_PPI.itp --inter=inter_PPI.itp --ter=ter_PPI.itp --params=list_param.itp --ngen=1 --name=PPIH --output=PPIhalf.itp --nogeom
+
+#3 - Connect them
+python3 ../../../../__main__.py --bbs=PAMAMhalf.itp,PPIhalf.itp --in=connect.in --params=list_param.itp --name=PAMPPI --output=PAMAMPPI.itp --gro=PAMAMPPI.gro --nsteps 500 --polymer

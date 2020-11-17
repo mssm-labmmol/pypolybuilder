@@ -1,0 +1,8 @@
+#[ BUILDING BLOCKS ]
+1       etyleneglycol
+2       etyleneglycol
+3       ter_etyleneglycol
+
+#[ CONNECTS ]
+1       2       3       1
+2       3       3       1

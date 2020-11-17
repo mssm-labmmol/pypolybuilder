@@ -1,0 +1,14 @@
+;This example will create a two PAMAM-half molecule united by a two monomers PolyEtyleneglycol polymer
+
+1 - create the PAMAM half dendrimer topology with the dendrimer module
+
+python ../pypolybuilder/__main__.py --core=core_PAMAM.itp --inter=inter_PAMAM.itp --ter=ter_PAMAM.itp --params=list_param.itp --ngen=1 --name=PAMAMhalf --output=PAMAMhalf.itp --gro=PAMAMhalf.gro
+
+
+2 - Note that the connect.in file have the information about which atom of a topology will bond at which atom of the other topology
+
+;3 - Open the PAMAMhalf.itp file that was created and change the building block name to PAMAMhalf in the [ moleculetype ] field. Also delete the [ angles ] and [ dihedrals ] fields. We do not need to add the [ branches ] because the connect.in file already has this information. -> no more longer needed
+
+3 - Run pyPolyBuilder in general mode
+
+python ../pypolybuilder/__main__.py --bbs=PAMAMhalf.itp,etyleneglycol.itp --in=connect.in --params=list_param.itp --name=PAMAM_PolyEtyleneglycol --output=PAMAM_PolyEtyleneglycol.itp --gro=PAMAM_PolyEtyleneglycol.gro --polymer --optgeo

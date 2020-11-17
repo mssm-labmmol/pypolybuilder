@@ -1,0 +1,8 @@
+#[ BUILDING BLOCKS ]
+1 PUB
+2 PUI
+3 PUE
+
+#[ CONNECTS ]
+1      2    36    1
+2      3    35    1

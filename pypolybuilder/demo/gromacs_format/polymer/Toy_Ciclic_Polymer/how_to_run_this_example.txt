@@ -1,0 +1,31 @@
+#This example will create a fictional molecule that we are calling polymer
+
+#There are two ways that we can execute this procedure, the first is use the connect.in to connect each building block individually and make all the polymer at once; the second is to make each part of the polymer separately and then unite them.
+
+if [ $1 == '1' ]; then
+    #The first way:
+
+    #1- As all the files are already prepared:
+
+    python3 ../../../../__main__.py --bbs=nc3.itp,ter_etyleneglycol.itp,etyleneglycol.itp --in=connect.in --params=list_param.itp --name=TOY --output=toy.itp --polymer
+
+elif [ $1 == '2' ]; then
+    #The second way:
+
+    #1- Firstly we will create the polymer ring:
+
+    python ../pypolybuilder/__main__.py --bbs=nc3.itp,etyleneglycol.itp --in=connect_ring.in --params=list_param.itp --name=RING --output=ring.itp --polymer
+
+    #2- And create one of the polymer arms:
+
+    python3 ../../../../__main__.py --bbs=ter_etyleneglycol.itp,etyleneglycol.itp --in=connect_arm.in --params=list_param.itp --name=ARM --output=arm.itp --polymer
+
+    #3- And so on, we will bond them:
+
+    python3 ../../../../__main__.py --bbs=ring.itp,arm.itp --in=connect_BBs.in --params=list_param.itp --name=TOY --output=toy.itp --polymer 
+
+else
+
+    echo "The mode 1 or 2 for building this molecule should be selected"
+
+fi

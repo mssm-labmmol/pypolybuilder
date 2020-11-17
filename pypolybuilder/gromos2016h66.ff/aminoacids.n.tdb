@@ -1,0 +1,137 @@
+[ None ]
+;
+; ---------- NH2 initial patch for peptides
+;
+[ NH2 ]
+[ Replace ]
+N      NT      14.0067   -0.980
+CA     CH1     13.0190    0.250      0
+[ add ]
+2      4       H       N      CA      C
+       H   1.008  0.365
+[ delete ]
+H
+[ bonds ]
+N      H1      gb_2
+N      H2      gb_2
+[ angles ]
+H1      N      H2      ga_10
+CA      N      H1      ga_11
+CA      N      H2      ga_11
+[ dihedrals ]
+H1      N      CA      C      gd_29
+
+
+
+
+
+
+
+
+
+
+[ PRO-NH2+ ]
+[ replace ]
+N            NT      14.0067 0.128
+CA            CH1      13.0190 0.188
+CD            CH2r      14.0270 0.188
+[ add ]
+2      4      H      N      CA      C
+      H      1.008      0.248
+[ bonds ]
+N      H1      gb_2
+N      H2      gb_2
+[ angles ]
+H1      N      H2      ga_10
+CA      N      H1      ga_11
+CA      N      H2      ga_11
+CD      N      H1      ga_11
+CD      N      H2      ga_11
+[ dihedrals ]
+H1      N      CA      C      gd_29
+;
+; xxx
+;
+[ NH3+ ]
+[ replace ]
+N            NL      14.0067      0.129
+CA            CH1      13.019      0.127      0
+[ add ]
+3      4      H      N      CA      C
+      H      1.008      0.248
+[ delete ]
+H
+[ bonds ]
+N      H1      gb_2
+N      H2      gb_2
+N      H3      gb_2
+[ angles ]
+H1      N      H2      ga_10
+H2      N      H3      ga_10
+H3      N      H1      ga_10
+CA      N      H1      ga_11
+CA      N      H2      ga_11
+CA      N      H3      ga_11
+[ dihedrals ]
+H1      N      CA      C      gd_29
+;
+; ---------- XXX
+;
+
+
+[ PRO-NH ]
+[ replace ]
+N            N      14.0067      -0.31
+[ add ]
+1      4      H      N      CA      C
+      H      1.008      0.31
+[ bonds ]
+N      H      gb_2
+[ angles ]
+CA      N      H      ga_11
+CD      N      H      ga_11
+
+[ GLY-NH3+ ]
+[ replace ]
+N            NL      14.0067      0.129
+CA            CH2      14.027      0.127      0
+[ add ]
+3      4      H      N      CA      C
+      H      1.008      0.248
+[ delete ]
+H
+[ bonds ]
+N      H1      gb_2
+N      H2      gb_2
+N      H3      gb_2
+[ angles ]
+H1      N      H2      ga_10
+H2      N      H3      ga_10
+H3      N      H1      ga_10
+CA      N      H1      ga_11
+CA      N      H2      ga_11
+CA      N      H3      ga_11
+[ dihedrals ]
+H1      N      CA      C      gd_29
+
+;
+; ---------- D5OH initial patch for DNA
+;
+[ D5OH ]
+[ replace ]
+O5*    O5*   OA     15.9994  -0.548
+C5*    C5*   CH2    14.0270   0.150
+[ add ]
+1      2      H5*       O5*      C5*      C4*
+       H      1.00800   0.398
+[ delete ]
+P
+O1P
+O2P
+[ bonds ]
+O5*    H5*    gb_1
+[ angles ]
+C5*    O5*    H5*    ga_12
+[ dihedrals ]
+C4*    C5*    O5*    H5*    gd_23
+

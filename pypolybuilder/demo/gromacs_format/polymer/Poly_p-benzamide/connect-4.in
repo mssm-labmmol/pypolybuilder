@@ -1,0 +1,10 @@
+#[ BUILDING BLOCKS ]
+1 PPDB
+2 TCOI
+3 PPDI
+4 TCOE
+
+#[ CONNECTS ]
+1      2    14    2
+2      3    13    2
+3      4    13    2

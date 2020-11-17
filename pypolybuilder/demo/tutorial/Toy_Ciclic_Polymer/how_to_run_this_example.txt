@@ -1,0 +1,25 @@
+;This example will create a fictional molecule that we are calling polymer
+
+;There are two ways that we can execute this procedure, the first is use the connect.in to connect each building block individually and make all the polymer at once; the second is to make each part of the polymer separately and then unite them.
+
+;The first way:
+
+1- As all the files are already prepared:
+
+python ../pypolybuilder/__main__.py --bbs=nc3.itp,ter_etyleneglycol.itp,etyleneglycol.itp --in=connect.in --params=list_param.itp --name=TOY --output=toy.itp --gro=toy.gro --polymer --optgeo
+
+;The second way:
+
+1- Firstly we will create the polymer ring:
+
+python ../pypolybuilder/__main__.py --bbs=nc3.itp,etyleneglycol.itp --in=connect_ring.in --params=list_param.itp --name=RING --output=ring.itp --polymer
+
+2- And create one of the polymer arms:
+
+python ../pypolybuilder/__main__.py --bbs=ter_etyleneglycol.itp,etyleneglycol.itp --in=connect_arm.in --params=list_param.itp --name=ARM --output=arm.itp --polymer
+
+;3- Now we need to open the ring.itp and the arm.itp files and delete the [ angles ] and [ dihedrals] fields.-> no more longer needed
+
+3- And so on, we will bond them:
+
+python ../pypolybuilder/__main__.py --bbs=ring.itp,arm.itp --in=connect_BBs.in --params=list_param.itp --name=TOY --output=toy.itp --gro=toy.gro --polymer --optgeo
