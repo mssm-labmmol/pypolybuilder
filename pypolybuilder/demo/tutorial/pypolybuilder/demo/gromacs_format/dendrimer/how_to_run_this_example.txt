@@ -1,3 +1,0 @@
-#This will create a PAMAM dendrimer of generation 1
-
-python ../../../__main__.py --core=core_PAMAM_2.itp --inter=inter_PAMAM.itp --ter=ter_PAMAM.itp --params=list_param.itp --ngen=1
