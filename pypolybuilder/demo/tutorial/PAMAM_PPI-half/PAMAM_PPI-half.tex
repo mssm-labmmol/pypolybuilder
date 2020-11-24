@@ -46,7 +46,16 @@ Intermediary and terminal blocks are the same as used in PAMAM and PPI tutorials
 Therefore, firstly each half will be built using the dendrimer module by using the following command lines:
 
 \begin{lstlisting}
-python3 ../../../../__main__.py --core=coreHalf_PAMAM.itp --inter=inter_PAMAM.itp --ter=ter_PAMAM.itp --params=list_param.itp --ngen=1 --name=PAMH --output=PAMAMhalf.itp --nogeom --dendrimer
+python3 ../../../../__main__.py \
+--core=coreHalf_PAMAM.itp \
+--inter=inter_PAMAM.itp \
+--ter=ter_PAMAM.itp \
+--params=list_param.itp \
+--ngen=1 \
+--name=PAMH \
+--output=PAMAMhalf.itp \
+--nogeom \
+--dendrimer
 \end{lstlisting}
 
 To build the first side using PAMAM BBs.
@@ -64,7 +73,15 @@ Secondly, PPI half is built.
 The procedure is similar to the one for building the PAMAM half:
 
 \begin{lstlisting}
-python3 ../../../../__main__.py --core=coreHalf_PPI.itp --inter=inter_PPI.itp --ter=ter_PPI.itp --params=list_param.itp --ngen=1 --name=PPIH --output=PPIhalf.itp --nogeom
+python3 ../../../../__main__.py \
+--core=coreHalf_PPI.itp \
+--inter=inter_PPI.itp \
+--ter=ter_PPI.itp \
+--params=list_param.itp \
+--ngen=1 \
+--name=PPIH \
+--output=PPIhalf.itp \
+--nogeom
 \end{lstlisting}
 
 In both calls of pyPolyBuilder, the option \texttt{--nogeom} was used since we're not interested in optimizing the geometry for an intermediary molecule. 
@@ -94,7 +111,15 @@ Connecting both sides, the final molecule will be generated (Figure \ref{fig:Hal
 The command line to connect the dendrimer is the following one:
 
 \begin{lstlisting}
-python3 ../../../../__main__.py --bbs=PAMAMhalf.itp,PPIhalf.itp --in=connect.in --params=list_param.itp --name=PAMPPI --output=PAMAMPPI.itp --gro=PAMAMPPI.gro --nsteps 500 --polymer
+python3 ../../../../__main__.py \
+--bbs=PAMAMhalf.itp,PPIhalf.itp \
+--in=connect.in \
+--params=list_param.itp \
+--name=PAMPPI \
+--output=PAMAMPPI.itp \
+--gro=PAMAMPPI.gro \
+--nsteps 500 \
+--network
 \end{lstlisting}
 
 Once this last command line is executed, the dendrimer will be readily prepared, including its geometry optimized in vacuum (Figure \ref{fig:HalfPPB}).

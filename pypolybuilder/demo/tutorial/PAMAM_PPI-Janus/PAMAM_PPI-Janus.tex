@@ -17,7 +17,7 @@ Hence, it is not straightforward to build a dendrimer using BBs of different typ
 The BBs that are going to be used in this tutorial are exactly the same ones used in previous tutorials (see Figure \ref{fig:JanusBBs}).
 These files are provided in the demo directory in pypolybuilder root, which structure is illustrated below:
 \begin{lstlisting}
-<path/to/pypolybuilder>/demo/gromacs_format/dendrimer/PAMAM\_PPI
+<path/to/pypolybuilder>/demo/gromacs_format/dendrimer/PAMAM_PPI
 \end{lstlisting}
 \dirtree{%
 .1 PAMAM\_PPI.
@@ -65,7 +65,16 @@ With this \texttt{[ branches ]}, the intermediary blocks will only be connected 
 First, the PAMAM branches are included by using the command line code:
 
 \begin{lstlisting}
-python3 ../../../../__main__.py --core=core_PAMAM.itp --inter=inter_PAMAM.itp --ter=ter_PAMAM.itp --params=list_param.itp --ngen=1 --name=PAMH --output=PAMAMhalf.itp --nogeom --dendrimer
+python3 ../../../../__main__.py \
+--core=core_PAMAM.itp \
+--inter=inter_PAMAM.itp \
+--ter=ter_PAMAM.itp \
+--params=list_param.itp \
+--ngen=1 \
+--name=PAMH \
+--output=PAMAMhalf.itp \
+--nogeom \
+--dendrimer
 \end{lstlisting}
 
 In this command line, \texttt{--core}, \texttt{--inter} and \texttt{--ter} were used for selecting the building blocks, \texttt{--params} for parsing force fields parameter files, \texttt{--ngen} to select the generation of the PAMAM that will be grown, \texttt{--name} for naming the topology and \texttt{--output} for naming the generated MTF.
@@ -100,7 +109,16 @@ to include the desired \texttt{[ branches ]} shown below in the final of the fil
 After editing the \texttt{PAMAMhalf.itp} file, the second part of the dendrimer may be grown by running the following command line:
 
 \begin{lstlisting}
-python3 ../../../../__main__.py --core=PAMAMhalf.itp --inter=inter_PPI.itp --ter=ter_PPI.itp --params=list_param.itp --ngen=1 --name=PAMPPI --output=PAMAM_PPI.itp --gro=PAMAM_PPI.gro --dendrimer
+python3 ../../../../__main__.py \
+--core=PAMAMhalf.itp \
+--inter=inter_PPI.itp \
+--ter=ter_PPI.itp \
+--params=list_param.itp \
+--ngen=1 \
+--name=PAMPPI \
+--output=PAMAM_PPI.itp \
+--gro=PAMAM_PPI.gro \
+--dendrimer
 \end{lstlisting}
 
 Here, as the geometry is wanted, the \texttt{--nogeom} flag was not used.

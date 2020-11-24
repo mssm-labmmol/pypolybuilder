@@ -28,7 +28,8 @@
  language=bash, 
  basicstyle=\ttfamily\small,
  numberstyle=\footnotesize,
- numbers=left,
+%  numbers=left,
+ numbers=none,
  backgroundcolor=\color{gray!10},
  frame=single,
  tabsize=2,
@@ -41,7 +42,8 @@
  framexbottommargin=2pt,
  extendedchars=false,
  inputencoding=utf8,
- showstringspaces=false
+ showstringspaces=false,
+ columns=fullflexible
  }
 \usepackage{dirtree}
 \usepackage{indentfirst}
@@ -95,7 +97,7 @@ PyPolyBuilder is a building block (BB) based automated topology builder.
 Hence, based on a few BB molecular topology files (MTF), it is able to build a larger and more complex MTF in addition of a suggestion of the geometry as input for another molecular dynamics (MD) software.
 Currently the code supports gromacs and gromos format.
 
-PyPolyBuilder has two modules of application. The dendrimer module and the network one {\red{(also referred to as the polymer module)}}. 
+PyPolyBuilder has two modules of application. The dendrimer module and the network one .
 
 \subsection{Dendrimer module}
 PyPolyBuilder have a optimized and easier to use module in order to generate dendrimers (star-like polymers).
@@ -307,7 +309,7 @@ pypolybuilder --bbs=bb_PNIP-start.itp,bb_PNIP.itp,bb_PNIP-end.itp \
               --name=PNIPAM \
               --output=PNIPAM.itp \
               --gro=PNIPAM.gro \
-              --polymer
+              --network
 \end{lstlisting}
 
 All possible options will be described in detail in the next section.
@@ -318,7 +320,7 @@ These are:
     
     \item \textbf{\texttt{--in} or \texttt{-in}} should define a path for the connectivity file.
     
-    \item \textbf{\texttt{--polymer}} sets the module that will be called by pyPolybuilder.
+    \item \textbf{\texttt{--network}} sets the module that will be called by pyPolybuilder.
 \end{itemize}
 
 \subsection{Command line options}
@@ -408,8 +410,8 @@ A complete list can be consulted below:
 \begin{itemize}
   \item \textbf{\texttt{--dendrimer} or \texttt{-dendrimer}}:\\
     Set building mode to Dendrimer.
-  \item {\red{\textbf{\texttt{--polymer} or \texttt{-polymer}}:\\
-    Set building mode to Polymer.}}
+  \item \textbf{\texttt{--network} or \texttt{-network}}:\\
+    Set building mode to Network.
 \end{itemize}
 
 \item \textbf{Output Formats}

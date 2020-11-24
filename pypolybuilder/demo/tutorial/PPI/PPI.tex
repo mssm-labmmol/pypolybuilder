@@ -32,7 +32,16 @@ The core\_PPI.itp, inter\_PPI.itp and ter\_PPI.itp files are the MTF for the cor
 Once the BBs and the parameters list are successfully built, one can easily run pyPolyBuilder by using the code line (also available in \texttt{how\_to\_run\_this\_example.txt} in demo directory) to obtain a generation 1 PPI dendrimer (Figure \ref{fig:PPIG1}):
 
 \begin{lstlisting}
-python3 ../../../../__main__.py --core=core_PPI.itp --inter=inter_PPI.itp --ter=ter_PPI.itp --params=list_param.itp --ngen=1 --name=PPI --output=PPI.itp --gro=PPI.gro --dendrimer
+python3 ../../../../__main__.py \
+--core=core_PPI.itp \
+--inter=inter_PPI.itp \
+--ter=ter_PPI.itp \
+--params=list_param.itp \
+--ngen=1 \
+--name=PPI \
+--output=PPI.itp \
+--gro=PPI.gro \
+--dendrimer
 \end{lstlisting}
 
 Each options in this command line were chosen to select each building block (\texttt{--core}, \texttt{--inter} and \texttt{--ter}),  the dendrimer generation \texttt{(--ngen}), the topology name, for instance the name that will be placed into \texttt{[ moleculetype ]} in the MTF 

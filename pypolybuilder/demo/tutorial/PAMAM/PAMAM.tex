@@ -30,7 +30,16 @@ The file names are self-explanatory, the core\_PAMAM.itp file is the MTF for the
 Once the BBs and the parameters list are successfully built, one can easily run pypolybuilder by using the code line below (also available in file \texttt{how\_to\_run\_this\_example.txt} in demo directory) to obtain a generation 2 PAMAM dendrimer (Figure \ref{fig:PAMAMG2}):
 
 \begin{lstlisting}
-python3 ../../../../__main__.py --core=core_PAMAM.itp --inter=inter_PAMAM.itp --ter=ter_PAMAM.itp --params=list_param.itp --ngen=2 --name=PAMAM --output=PAMAM.itp --gro=PAMAM.gro --gromacs --dendrimer
+python3 ../../../../__main__.py \ --core=core_PAMAM.itp \
+--inter=inter_PAMAM.itp \
+--ter=ter_PAMAM.itp \
+--params=list_param.itp \
+--ngen=2 \
+--name=PAMAM \
+--output=PAMAM.itp \
+--gro=PAMAM.gro \
+--gromacs \
+--dendrimer
 \end{lstlisting}
 
 \begin{figure}

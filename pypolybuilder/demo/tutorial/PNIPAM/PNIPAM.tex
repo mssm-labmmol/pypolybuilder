@@ -54,10 +54,17 @@ Consistently, this file contains the informations about what bonds to create in 
 To build a PNIPAM with 5 monomer units, one can run the following code:
 
 \begin{lstlisting}
-python3 ../../../../__main__.py --bbs=bb_PNIP-start.itp,bb_PNIP.itp,bb_PNIP-end.itp --in=connect-5.in --params=list_param.itp --name=PNIPAM --output=PNIPAM.itp --gro=PNIPAM.gro --polymer
+python3 ../../../../__main__.py \
+--bbs=bb_PNIP-start.itp,bb_PNIP.itp,bb_PNIP-end.itp \
+--in=connect-5.in \
+--params=list_param.itp \
+--name=PNIPAM \
+--output=PNIPAM.itp \
+--gro=PNIPAM.gro \
+--network
 \end{lstlisting}
 
-Note that the \texttt{--polymer} was explicitly invoked and that all the BBs are passed at once using the \texttt{--bbs} option to be used by the \texttt{connect.in} file.
+Note that the \texttt{--network} was explicitly invoked and that all the BBs are passed at once using the \texttt{--bbs} option to be used by the \texttt{connect.in} file.
 
 Once the optimization step is gone, the PNIPAM MTF will be ready and an initial guess for the coordinates file will be provided.
 It is important to note that this guess is evaluated in vaccum and a further energy minimization step is highly advisable to be carried out in a proper molecular dynamics package.
@@ -90,7 +97,14 @@ The former connects 5 monomers of the PNIPAM polymer, while the later uses the s
 Using the \texttt{connect.in} as the connectivity file, one can simply run the code:
 
 \begin{lstlisting}
-python3 ../../../../__main__.py --bbs=bb_PNIP-start.itp,bb_PNIP.itp,bb_PNIP-end.itp --in=connect.in --params=list_param.itp --name=PNIPAM --output=PNIPAM.itp --gro=PNIPAM.gro --polymer
+python3 ../../../../__main__.py \
+--bbs=bb_PNIP-start.itp,bb_PNIP.itp,bb_PNIP-end.itp \
+--in=connect.in \
+--params=list_param.itp \
+--name=PNIPAM \
+--output=PNIPAM.itp \
+--gro=PNIPAM.gro \
+--network
 \end{lstlisting}
 
 That is very similar to the previous one.

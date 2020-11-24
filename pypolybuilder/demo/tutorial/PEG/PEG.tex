@@ -42,14 +42,21 @@ The command for building a PEG polymer with 5 monomers is automated in a bash fi
 In order to have a PEG polymer with 5 monomers, with the files provided in the tutorial directory one can use the following command line:
 
 \begin{lstlisting}
-python3 ../../../../__main__.py --bbs=etyleneglycol-start.itp,etyleneglycol.itp,etyleneglycol-end.itp --in=connect.in --params=list_param.itp --name=PEG --output=PEG5x.itp --gro=PEG5x.gro --polymer
+python3 ../../../../__main__.py \
+   --bbs=etyleneglycol-start.itp,etyleneglycol.itp,etyleneglycol-end.itp \
+   --in=connect.in \
+   --params=list_param.itp \
+   --name=PEG \
+   --output=PEG5x.itp \
+   --gro=PEG5x.gro \
+   --network
 \end{lstlisting}
 
 Here, \texttt{--bb} option receives the three used BBs: the beginning of the polymer, than the repetition monomer and a final BB.
 The connectivity file (named "connect.in") is input through \texttt{--in} option.
 FF parameters are defined in \texttt{list\_param.itp} used in \texttt{--params}.
 Also, the output is named according to \texttt{--name}, \texttt{--output} and \texttt{--gro}.
-At this tutorial, the \texttt{--polymer} flag needs to be used so the network module will be called.
+At this tutorial, the \texttt{--network} flag needs to be used so the network module will be called.
 
 After pyPolyBuilder has finished the optimization step, one can check the molecule geometry in vacuum (Figure \ref{fig:PEGPPB}). 
 This initial geometry and the MTFs can be tested by running a MD simulation using the created files.
