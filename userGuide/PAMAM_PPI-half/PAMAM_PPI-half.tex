@@ -6,11 +6,11 @@ That is, even the core block is split (Figure \ref{fig:Half}).
 \begin{figure}
     \centering
     \includegraphics[width=0.4\textwidth]{PAMAM_PPI-half/PAMAMPPIPOL.png}
-    \caption{PAMAM/PPI dendrimer in which each side is composed by either PAMAM or PPI dendrimer. The PAMAM core block is illustrated in red, intermediary and core blocks are displayed in blue and pink, respectively. PPI part is displayed in orange, cyan and purple for core, intermediary and terminal BBs, respectively. }
+    \caption{PAMAM/PPI dendrimer in which each side is composed by either PAMAM or PPI dendrimer. The PAMAM core block is illustrated in red, intermediary and core blocks are displayed in blue and pink, respectively. PPI part is displayed in orange, cyan and purple for core, intermediary, and terminal BBs, respectively. }
     \label{fig:Half}
 \end{figure}
 
-All needed files are provided in demo directory:
+All needed files are provided in the demo directory:
 
 \begin{lstlisting}
 <path/to/pypolybuilder>/demo/gromacs_format/polymer/PAMAM_PPI_Half
@@ -31,19 +31,19 @@ All needed files are provided in demo directory:
 .3 mdp.
 }
 
-All the following procedure for building the molecule with a side using only PAMAM BBs and the other side using only PPI BBs, is automated in a available bash file called \texttt{how\_to\_run\_this\_example.txt}.
+All the following procedure for building the molecule with a side using only PAMAM BBs, and the other side using only PPI BBs, is automated in an available bash file called \texttt{how\_to\_run\_this\_example.txt}.
 
-In order to do that, we created separated topology files of the core block for each side of the dendrimer, \texttt{coreHalf\_PAMAM.itp} and \texttt{coreHalf\_PPI.itp}.
+In order to do that, we created separated topology files of the core block for each side of the dendrimer: \texttt{coreHalf\_PAMAM.itp} and \texttt{coreHalf\_PPI.itp}.
 Intermediary and terminal blocks are the same as used in PAMAM and PPI tutorials (See Figure \ref{fig:HalfBBs}).
 
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{PAMAM_PPI-half/PAMAMPPIBBs.png}
-    \caption{PAMAM/PPI dendrimer in which each side is composed of PAMAM or PPI. PAMAM BBs are illustrated on the right where the core block is illustrated in red, intermediary and core blocks are displayed in blue and pink, respectively. PPI part is on the left and displayed in orange, cyan and purple for core, intermediary and terminal BBs, respectively.}
+    \caption{PAMAM/PPI dendrimer in which each side is composed of PAMAM or PPI. PAMAM BBs are illustrated on the right, where the core block is illustrated in red, and intermediary and core blocks are displayed in blue and pink, respectively. PPI part is on the left and displayed in orange, cyan, and purple for core, intermediary, and terminal BBs, respectively.}
     \label{fig:HalfBBs}
 \end{figure}
 
-Therefore, firstly each half will be built using the dendrimer module by using the following command lines:
+Therefore, firstly each half will be built using the dendrimer module by using the following command lines to build the first side using PAMAM BBs:
 
 \begin{lstlisting}
 python3 ../../../../__main__.py \
@@ -58,7 +58,6 @@ python3 ../../../../__main__.py \
 --dendrimer
 \end{lstlisting}
 
-To build the first side using PAMAM BBs.
 Here the usage of dendrimer module is exactly the same as when generating a whole dendrimer.
 The only difference is that at the core BB, the \texttt{[ branches ]} field tells pyPolyBuilder that only the two available branching points will be used.
 
@@ -81,11 +80,12 @@ python3 ../../../../__main__.py \
 --ngen=1 \
 --name=PPIH \
 --output=PPIhalf.itp \
---nogeom
+--nogeom \
+--dendrimer
 \end{lstlisting}
 
 In both calls of pyPolyBuilder, the option \texttt{--nogeom} was used since we're not interested in optimizing the geometry for an intermediary molecule. 
-Hence, this options can be used to save time skipping the optimization step and the generation of a coordination file for the intermediary molecules.
+Hence, this options can be used to save time skipping the optimization stage and the generation of a coordinates file for the intermediary molecules.
 
 \begin{figure}
     \centering
@@ -94,7 +94,7 @@ Hence, this options can be used to save time skipping the optimization step and 
     \label{fig:HalfHalf}
 \end{figure}
 
-Once both halfs are done, one will have the MTFs for each side of the dendrimer (see Figure \ref{fig:HalfHalf}.
+Once both halfs are done, one will have the MTFs for each side of the dendrimer (see Figure \ref{fig:HalfHalf}).
 Now these two parts need to be connected by using the network module.
 In order to do that, the \texttt{connect.in} file simply uses both sides and connect the fist atom of each topology.
 
@@ -123,23 +123,23 @@ python3 ../../../../__main__.py \
 \end{lstlisting}
 
 Once this last command line is executed, the dendrimer will be readily prepared, including its geometry optimized in vacuum (Figure \ref{fig:HalfPPB}).
-In this tutorial, the internal pseudo-force field of pyPolyBuilder was used, so it is strongly suggested that after building any molecule in pyPolyBuilder, a MD simulation package should be used to minimize the energy using an actual force field (if the option \texttt{--forcefield} was not used in pyPolyBuilder) and to equilibrate the molecule in the desired solvent.
+In this tutorial, the internal pseudo-force field of pyPolyBuilder was used, so it is strongly suggested that, after building any molecule in pyPolyBuilder, a MD simulation package should be used to minimize the energy using an actual force field (if the option \texttt{--forcefield} was not used in pyPolyBuilder) and to equilibrate the molecule in the desired solvent.
 
 \begin{figure}
     \centering
     \includegraphics[width=0.5\textwidth]{PAMAM_PPI-half/PAMAMPPIPPB.pdf}
-    \caption{PAMAM/PPI dendrimer in which each side is composed by either PAMAM or PPI dendrimer. The PAMAM core block is illustrated in red, intermediary and core blocks are displayed in blue and pink, respectively. PPI part is displayed in orange, cyan and purple for core, intermediary and terminal BBs, respectively. }
+    \caption{PAMAM/PPI dendrimer in which each side is composed by either PAMAM or PPI dendrimer. The PAMAM core block is illustrated in red, and intermediary and core blocks are displayed in blue and pink, respectively. PPI part is displayed in orange, cyan, and purple for core, intermediary and terminal BBs, respectively. }
     \label{fig:HalfPPB}
 \end{figure}
 
 To mimic the procedure of energy minimization, equilibration and simulation, the run directory was provided where the script \texttt{PAMAM\_PPI\_half.sh} can be used to automate the whole process.
-The outputs from pyPolyBuilder \texttt{PAMAMPPI.*} need to be copied to the run directory and the \texttt{PAMAM\_PPI\_half.sh} need to be changed to include an actual path for a gromacs package.
-By running \texttt{PAMAM\_PPI\_half.sh}, it will automatically solvate the molecule, minimize the energy of the system, equilibrate it for 100 ps in nvt and npt ensembles and carry out 100 ps of molecular dynamics simulation.
+The outputs from pyPolyBuilder \texttt{PAMAMPPI.*} needs to be copied to the run directory and \texttt{PAMAM\_PPI\_half.sh} need to be changed to include an actual path for a gromacs package.
+By running \texttt{PAMAM\_PPI\_half.sh}, it will automatically solvate the molecule, minimize the energy of the system, equilibrate it for 100 ps in nvt and npt ensembles, and carry out 100 ps of molecular dynamics simulation.
 An equilibrated structure is shown in Figure \ref{fig:HalfSOL}.
 
 \begin{figure}
     \centering
     \includegraphics[width=0.5\textwidth]{PAMAM_PPI-half/PAMAMPPISOL.pdf}
-    \caption{PAMAM/PPI dendrimer in which each side is composed of either PAMAM or PPI in water. The color scheme for the dendrimer is in accordance with Figure \ref{fig:HalfPPB} and water molecules are translucent in silver.}
+    \caption{PAMAM/PPI dendrimer in which each side is composed of either PAMAM or PPI in water. The color scheme for the dendrimer is in accordance with Figure \ref{fig:HalfPPB} and water molecules are translucent in gray.}
     \label{fig:HalfSOL}
 \end{figure}

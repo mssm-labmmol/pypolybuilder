@@ -1,6 +1,6 @@
 
 The BBs for the poly(propyleneimine) (PPI) dendrimer are shown in Figure \ref{fig:PPIBB}.
-The core is a diamino butane, intermediary monomer is defined as a tertiary amine in addition to to a secondary amine which is the anchoring point for the core or previous intermediary shell bonding and the terminal is simply a primary amine.
+The core is a diamino butane, intermediary monomer is defined as a tertiary amine in addition to a secondary amine, which is the anchoring point for the core or previous intermediary shell bonding and the terminal is simply a primary amine.
 It is important to note that PPI dendrimers are commonly defined differently.
 For instance, this tutorial may be adapted to generate a common used PPI dendrimer by removing the secondary amine from the intermediary monomer and modifying the \texttt{[ branches ]} field in \texttt{inter\_PPI.itp}.
 
@@ -12,7 +12,7 @@ For instance, this tutorial may be adapted to generate a common used PPI dendrim
     \label{fig:PPIBB}
 \end{figure}
 
-All PPI BBs, in addition to its protonated versions, are provided in the demo directory in pypolybuilder root, which structure is illustrated below:
+All PPI BBs, in addition to their protonated versions, are provided in the demo directory in pypolybuilder root, whose structure is illustrated beelow:
 \begin{lstlisting}
 <path/to/pypolybuilder>/demo/gromacs_format/dendrimer/PPI
 \end{lstlisting}
@@ -28,7 +28,7 @@ All PPI BBs, in addition to its protonated versions, are provided in the demo di
 .3 mdp.
 }
 
-The core\_PPI.itp, inter\_PPI.itp and ter\_PPI.itp files are the MTF for the core, the intermediary and the terminal blocks, respectively.
+The core\_PPI.itp, inter\_PPI.itp, and ter\_PPI.itp files are the MTF for the core, the intermediary, and the terminal blocks, respectively.
 Once the BBs and the parameters list are successfully built, one can easily run pyPolyBuilder by using the code line (also available in \texttt{how\_to\_run\_this\_example.txt} in demo directory) to obtain a generation 1 PPI dendrimer (Figure \ref{fig:PPIG1}):
 
 \begin{lstlisting}
@@ -44,8 +44,8 @@ python3 ../../../../__main__.py \
 --dendrimer
 \end{lstlisting}
 
-Each options in this command line were chosen to select each building block (\texttt{--core}, \texttt{--inter} and \texttt{--ter}),  the dendrimer generation \texttt{(--ngen}), the topology name, for instance the name that will be placed into \texttt{[ moleculetype ]} in the MTF 
-(--name), to parse the list of force field parameters for pyPolyBuilder (\texttt{--params}) and to name the coordinates file and MTF output (\texttt{--gro} and \texttt{--output}, respectively).
+Each option in this command line was chosen to select each building block (\texttt{--core}, \texttt{--inter} and \texttt{--ter}),  the dendrimer generation \texttt{(--ngen}), the topology name, for instance the name that will be placed into \texttt{[ moleculetype ]} in the MTF 
+(--name), to parse the list of force field parameters for pyPolyBuilder (\texttt{--params}), and to name the coordinates file and MTF output (\texttt{--gro} and \texttt{--output}, respectively).
 
 \begin{figure}
     \centering
@@ -73,13 +73,13 @@ However, these scripts were developed for a specific architecture and need to be
     \label{fig:PPIG1PPB}
 \end{figure}
 
-PPI.sh is a script to automatically solvate, minimize energy, equilibrate for 100 ps using nvt and npt ensemble and run 100 ps of molecular dynamic simulation.
+PPI.sh is a script to automatically solvate, minimize energy, equilibrate for 100 ps using nvt and npt ensemble, and run 100 ps of molecular dynamic simulation.
 The simulation time is actually too small for simulating dendrimers. With this tutorial, we only intend to illustrate how pyPolyBuilder can be used in the creation of a molecular model.
 PPI.top is the topology file for the system and mdp directory have all required mdp files.
 However, these scripts were developed for a specific architecture and need to be adapted by each user.
 For instance, the path for gromacs needs to be adapted and the output from pyPolyBuilder (PPI.gro and PPI.itp) needs to be moved to run directory.
 
-After carrying out the solvation, energy minimization and 100 ps of both nvt and npt equilibrations, PPI dendrimer is in a more reasonable conformation (Figure \ref{fig:PPIG1SOL}).
+After carrying out the solvation, energy minimization, and 100 ps of both nvt and npt equilibrations, PPI dendrimer is in a more reasonable conformation (Figure \ref{fig:PPIG1SOL}).
 
 \begin{figure}
     \centering

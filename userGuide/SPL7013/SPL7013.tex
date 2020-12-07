@@ -24,7 +24,7 @@ The BBs themselves are illustrated in Figure \ref{fig:SPL7013BB}.
     \label{fig:SPL7013BB}
 \end{figure}
 
-MTFs for those BBs are available in the tutorial directory in pyPolyBuilder root, which structure is illustrated below:
+MTFs for those BBs are available in the tutorial directory in pyPolyBuilder root, whose structure is illustrated below:
 \begin{lstlisting}
 <path/to/pypolybuilder>/demo/gromacs_format/dendrimer/SPL7013
 \end{lstlisting}
@@ -41,7 +41,7 @@ MTFs for those BBs are available in the tutorial directory in pyPolyBuilder root
 }
 
 The MTFs are named according to its block and molecule name.
-The core\_BHA.itp is the benzhydrylamine core BB, inter\_LYS.itp the lysine intermediary block and the ter\_NDSA.itp is the naphtalene disulfonate acid terminal block.
+The core\_BHA.itp is the benzhydrylamine core BB, inter\_LYS.itp the lysine intermediary block, and the ter\_NDSA.itp is the naphtalene disulfonate acid terminal block.
 
 The command line below can be used to build a generation 1 SPL dendrimer (Figure \ref{fig:SPL7013G1}):
 
@@ -65,16 +65,16 @@ python3 ../../../../__main__.py \
 
 Some of the used option were already used in previous tutorials and explained in Section \ref{sec:CommandLine}.
 \texttt{--core}, \texttt{--inter} and \texttt{--ter} are used to select the dendrimer BBs and \texttt{--ngen} to select its generation number.
-\texttt{--name}, \texttt{--output} and \texttt{--gro} are used to name the topology, the MTF itself and the geometry coordinates file, respectively.
-\texttt{--gromacs} is used to define the format of the output files, in this case, in the gromacs format.
+\texttt{--name}, \texttt{--output} and \texttt{--gro} are used to name the topology, the MTF itself, and the geometry coordinates file, respectively.
+In turn, \texttt{--gromacs} is used to define the format of the output files, in this case, in the gromacs format.
 Even though \texttt{--gromacs} is the default, \texttt{--gromos} is also available.
-\texttt{--nsteps} set how many steps will be made in geometry optimization step.
+\texttt{--nsteps} sets how many steps will be made in the geometry optimization.
 PyPolyBuilder stops the iteration if the energy converges or if the \texttt{nstep} is reached.
-Before doing a local minimization to carry the geometry to a local minimum, pyPolyBuilder carry out a genetic algorithm (GA) optimization only for the torsional dihedrals in order to set a initial quasi-optimum geometry that will be optimized in the local minimization step.
+Before doing a local minimization to carry the geometry to a local minimum, pyPolyBuilder carries out a genetic algorithm (GA) optimization only for the torsional dihedrals in order to set an initial quasi-optimum geometry that will be optimized in the local minimization step.
 Due to the stochastic nature of GA, in very complex geometries it is possible that some atoms are very close at the end of the GA optimization.
 To avoid these bad interactions, \texttt{--nSkipLJ} set how many steps of the geometry optimization will be carried out without evaluating Lennard-Jones (LJ) interactions.
 Turning LJ interactions off for the first few steps allows the structure to relax only using bonded potentials avoiding bad contacts.
-\texttt{--stepLength} set the size of the minimization step.
+\texttt{--stepLength} sets the size of the minimization step.
 Also for complex systems, it is possible that the output of GA is far from optimum.
 So \texttt{--stepLength} can be used to allow a slow minimization in order to avoid overlaps.
 pyPolyBuilder has default values for bonded and non-bonded parameters.
@@ -83,13 +83,13 @@ Using the \texttt{--forceField} flag, one can pass to pyPolyBuilder the location
 It may be possible in some cases that the built-in FF is not good enough.
 
 SPL is, for instance, a real challenge due to its very complex structure.
-In this tutorial, 2016H66 FF was used to optimize its geometry, the built-in FF lead to an unphysical geometry in which some of the bonds were too long and others were too short (it can be tested by removing the \texttt{--forcefield} flag from the previous command-line).
+In this tutorial, 2016H66 FF was used to optimize its geometry, once the built-in FF leads to an unphysical geometry in which some of the bonds are too long and others are too short (it can be tested by removing the \texttt{--forcefield} flag from the previous command-line).
 Besides, the obtained structure may be equally problematic if the \texttt{--nsteps} keyword is not used.
 
 This is a really specific and singular dendrimer.
 The fact that the pyPolyBuilder is able to build this structure proofs its versatility and robustness.
 
-After pyPolyBuilder finish the optimization step, one can use any visualization software (such as vmd or pymol) to check the output geometry. 
+After pyPolyBuilder finish the optimization stage, one can use any visualization software (such as vmd or pymol) to check the output geometry. 
 Note that the coordinates are generated considering a dendrimer without any partial charge in vaccum.
 Hence, the obtained conformation is probably not fully realistic.
 However, if one wants to test the topology of this purely academic case, the run directory has some scripts to run a short molecular dynamics in order to equilibrate the molecule in water using gromacs.
@@ -103,7 +103,7 @@ These scripts were developed for a specific architecture and should be adapted b
     \label{fig:SPL7013PPB}
 \end{figure}
 
-Using the available scripts in the run directory to run a small equilibration after solvation and energy minimization in gromacs package, one can see the structure of SPL G1 dendrimer in Figure \ref{fig:SPL7013SOL}.
+By using the available scripts in the run directory to run a small equilibration after solvation and energy minimization in gromacs package, one can see the structure of SPL G1 dendrimer in Figure \ref{fig:SPL7013SOL}.
 
 \begin{figure}
     \centering
