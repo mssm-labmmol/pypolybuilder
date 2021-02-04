@@ -23,6 +23,7 @@ class Atom(object):
     __atom_list      = None
     __exclusion_list = None
     __exclusion_extra= None
+    __pairs_14_list = []
     __neighbor_list  = None
     __connected_list = None
     __is_in_specified_dihedral = None
@@ -69,6 +70,17 @@ class Atom(object):
         self.__was_central_atom = was_central_atom
         self.__was_central_atom_for = was_central_atom_for
 
+    def get_pairs14_list(self):
+        return self.__pairs_14_list
+
+    def set_pairs14_list(self, value):
+        pairs_14_list = copy.copy(value)
+        for atom_nr in pairs_14_list:
+            if (atom_nr <= int(self.get_nr())):
+                value.remove(atom_nr)
+        
+        self.__pairs_14_list = value
+    
     def get_exclusion_list(self):
         return self.__exclusion_list
 

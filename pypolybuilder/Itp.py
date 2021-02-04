@@ -298,6 +298,25 @@ class Itp(object):
             exclusion_list = Exclusions(list(set(exclusions)), list(set(exclusions_14)))
             atom.set_exclusion_list(exclusion_list)
             atom.set_exclusion_extra(exclusion_list)
+
+    def generate_pairs14(self):
+        for atom in self.get_atom_list():
+            atom.__pairs_list = list()
+            atom.__pairs_extra = list()
+
+        for atom in self.get_atom_list():
+            pairs = list()
+            for neighbor in atom.get_atom_list():
+                for second_neighbor in neighbor.get_atom_list():
+                    if (second_neighbor.get_nr() == atom.get_nr()): continue
+                    for third_neighbor in second_neighbor.get_atom_list():
+                        if (third_neighbor.get_nr() == neighbor.get_nr()): continue
+                        if (not atom.is_aromatic()) or (not third_neighbor.is_aromatic()):
+                            pairs.append(int(third_neighbor.get_nr()))
+            
+            if set(pairs):
+                print(atom.get_nr(), set(pairs))
+            atom.set_pairs14_list(set(pairs))
     
     def createDihedral(self, bond_list, x, y, z, dihedral_list):
         d = Dihedral.makeFromBonds(self, bond_list[x], bond_list[y], bond_list[z])    # create angle
