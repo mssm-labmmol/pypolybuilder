@@ -1,0 +1,33 @@
+[ moleculetype ]
+; Name   nrexcl
+PNIP    2
+
+[ atoms ]
+;  nr  type  resnr  resid  atom  cgnr  charge    mass    total_charge
+    1    CH2   1    PNIP      C    1    0.000  14.02700
+    2    CH1   1    PNIP      C    1    0.000  13.01900
+    3    C     1    PNIP      C    2    0.540  12.01100
+    4    O     1    PNIP      O    2   -0.540  15.99940
+    5    N     1    PNIP      N    3   -0.500  14.00670
+    6    H     1    PNIP      H    3    0.310   1.00800
+    7    CH1   1    PNIP      C    3    0.190  12.01100
+    8    CH3   1    PNIP      C    4    0.000  15.03500
+    9    CH3   1    PNIP      C    5    0.000  15.03500
+; total charge of the molecule:   0.000
+
+[ bonds ]
+;  ai   aj  funct   c0         c1
+    1    2    2   gb_21
+    2    3    2   gb_21
+    3    4    2   gb_21
+    3    5    2   gb_21
+    5    6    2   gb_21
+    5    7    2   gb_21
+    7    8    2   gb_21
+    7    9    2   gb_21
+
+[ dihedrals ]
+;  ai   aj   ak   al  funct    ph0      cp     mult
+;     4     3     2     1         1     gd_39
+;     4     3     2     1         1     gd_41
+

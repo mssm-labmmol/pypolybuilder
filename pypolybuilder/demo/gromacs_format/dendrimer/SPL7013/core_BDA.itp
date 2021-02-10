@@ -1,0 +1,89 @@
+[ moleculetype ]
+; Name   nrexcl
+CORE     2
+
+[ atoms ]
+;  nr  type  resnr  resid  atom  cgnr  charge    mass    total_charge
+    1    NT    1    CORE      N    1   -0.2500   14.0270
+    2    H     1    CORE      H    1    0.2000    1.0080
+    3    CH1   1    CORE      C    1    0.0500   14.0270 AR
+    4    C     1    CORE      C    2    0.0000  12.0110  AR  
+    5    C     1    CORE      C    2   -0.1298  12.0110  AR
+    6    HC    1    CORE      H    2    0.1298   1.0080  AR
+    7    C     1    CORE      C    2   -0.1298  12.0110  AR
+    8    HC    1    CORE      H    2    0.1298   1.0080  AR
+    9    C     1    CORE      C    2   -0.1298  12.0110  AR
+   10    HC    1    CORE      H    2    0.1298   1.0080  AR
+   11    C     1    CORE      C    2   -0.1298  12.0110  AR
+   12    HC    1    CORE      H    2    0.1298   1.0080  AR
+   13    C     1    CORE      C    2   -0.1298  12.0110  AR
+   14    HC    1    CORE      H    2    0.1298   1.0080  AR
+   15    C     1    CORE      C    3    0.0000  12.0110  AR
+   16    C     1    CORE      C    3   -0.1298  12.0110  AR
+   17    HC    1    CORE      H    3    0.1298   1.0080  AR
+   18    C     1    CORE      C    3   -0.1298  12.0110  AR
+   19    HC    1    CORE      H    3    0.1298   1.0080  AR
+   20    C     1    CORE      C    3   -0.1298  12.0110  AR
+   21    HC    1    CORE      H    3    0.1298   1.0080  AR
+   22    C     1    CORE      C    3   -0.1298  12.0110  AR
+   23    HC    1    CORE      H    3    0.1298   1.0080  AR
+   24    C     1    CORE      C    3   -0.1298  12.0110  AR
+   25    HC    1    CORE      H    3    0.1298   1.0080  AR
+   26    C     1    CORE      C    4    0.540  12.0110   
+   27    O     1    CORE      O    4   -0.540  15.9994
+   28    CH1   1    CORE      C    4    0.250  14.0270
+   29    NT    1    CORE      N    4   -0.550  14.0067
+   30    H     1    CORE      H    4    0.300   1.0080
+   31    CH2   1    CORE      C    5    0.000  14.0270
+   32    CH2   1    CORE      C    5    0.000  14.0270
+   33    CH2   1    CORE      C    5    0.000  14.0270
+   34    CH2   1    CORE      C    6    0.250  14.0270
+   35    NT    1    CORE      N    6   -0.550  14.0067
+   36    H     1    CORE      H    6    0.300   1.0080
+
+; total charge of the molecule:   0.000
+
+[ bonds ]
+;  ai   aj  funct   c0         c1
+    1    2    2   gb_21
+    1    3    2   gb_21
+    3    4    2   gb_21
+    4    5    2   gb_21
+    5    6    2   gb_21
+    5    7    2   gb_21
+    7    8    2   gb_21
+    7    9    2   gb_21
+    9   10    2   gb_21
+    9   11    2   gb_21
+   11   12    2   gb_21
+   11   13    2   gb_21
+   13   14    2   gb_21
+    4   13    2   gb_21 
+    3   15    2   gb_21
+   15   16    2   gb_21
+   16   17    2   gb_21
+   16   18    2   gb_21
+   18   19    2   gb_21
+   18   20    2   gb_21
+   20   21    2   gb_21
+   20   22    2   gb_21
+   22   23    2   gb_21
+   22   24    2   gb_21
+   24   25    2   gb_21
+   15   24    2   gb_21 
+    1   26    2   gb_21
+   26   27    2   gb_21 
+   26   28    2   gb_21 
+   28   29    2   gb_21 
+   29   30    2   gb_21  
+   28   31    2   gb_21 
+   31   32    2   gb_21 
+   32   33    2   gb_21 
+   33   34    2   gb_21 
+   34   35    2   gb_21 
+   35   36    2   gb_21 
+
+[ branches ]
+;  donor   acceptor
+       0	 29
+       0	 35

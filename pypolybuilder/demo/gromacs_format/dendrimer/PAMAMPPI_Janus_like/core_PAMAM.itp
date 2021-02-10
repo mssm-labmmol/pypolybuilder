@@ -1,0 +1,65 @@
+[ moleculetype ]
+; Name   nrexcl
+CORE     2
+
+[ atoms ]
+;  nr  type  resnr  resid  atom  cgnr  charge    mass    total_charge
+    1    CH2   1    CORE      C    1    0.250  14.02700
+    2    CH2   1    CORE      C    2    0.250  14.02700
+    3    NT    1    CORE      N    1   -0.750  14.00670
+    4    NT    1    CORE      N    2   -0.750  14.00670
+    5    CH2   1    CORE      C    1    0.250  14.02700
+    6    CH2   1    CORE      C    1    0.250  14.02700
+    7    CH2   1    CORE      C    2    0.250  14.02700
+    8    CH2   1    CORE      C    2    0.250  14.02700
+    9    CH2   1    CORE      C    3    0.000  14.02700
+   10    C     1    CORE      C    3    0.540  12.01100
+   11    O     1    CORE      O    3   -0.540  15.99940
+   12    CH2   1    CORE      C    4    0.000  14.02700
+   13    C     1    CORE      C    4    0.540  12.01100
+   14    O     1    CORE      O    4   -0.540  15.99940
+   15    CH2   1    CORE      C    5    0.000  14.02700
+   16    C     1    CORE      C    5    0.540  12.01100
+   17    O     1    CORE      O    5   -0.540  15.99940
+   18    CH2   1    CORE      C    6    0.000  14.02700
+   19    C     1    CORE      C    6    0.540  12.01100
+   20    O     1    CORE      O    6   -0.540  15.99940
+; total charge of the molecule:   0.000
+
+[ bonds ]
+;  ai   aj  funct   c0         c1
+    1    2    2   gb_21
+    1    3    2   gb_21
+    2    4    2   gb_21
+    3    5    2   gb_21
+    3    6    2   gb_21
+    4    7    2   gb_21
+    4    8    2   gb_21
+    5    9    2   gb_21
+    9   10    2   gb_21
+   10   11    2   gb_21
+    6   12    2   gb_21
+   12   13    2   gb_21
+   13   14    2   gb_21
+    7   15    2   gb_21
+   15   16    2   gb_21
+   16   17    2   gb_21
+    8   18    2   gb_21
+   18   19    2   gb_21
+   19   20    2   gb_21
+
+[ dihedrals ]
+;     4     2     1     3         1     gd_33
+;     4     2     1     3         1     gd_35
+
+
+[ branches ]
+;  donor   acceptor
+       0	 10
+       0	 13
+       0	 16
+       0	 19
+
+[ exclusions ]
+;  ai   aj
+   1    19

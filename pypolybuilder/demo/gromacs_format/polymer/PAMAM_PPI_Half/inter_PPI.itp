@@ -1,0 +1,38 @@
+[ moleculetype ]
+; Name   nrexcl
+INTR     2
+
+[ atoms ]
+;  nr  type  resnr  resid  atom  cgnr  charge    mass    total_charge
+    1    NT    1    PPII      N    1   -0.500  14.00670
+    2    CH2   1    PPII      C    1    0.250  14.02700
+    3    CH2   1    PPII      C    1    0.250  14.02700
+    4    CH2   1    PPII      C    2    0.250  14.02700
+    5    NT    1    PPII      N    2   -0.750  14.00670
+    6    CH2   1    PPII      C    2    0.250  14.02700
+    7    CH2   1    PPII      C    2    0.250  14.02700
+    8    CH2   1    PPII      C    3    0.000  14.02700
+    9    CH2   1    PPII      C    3    0.000  14.02700
+   10    CH2   1    PPII      C    3    0.000  14.02700
+   11    CH2   1    PPII      C    3    0.000  14.02700
+
+; total charge of the molecule:   0.000
+
+[ bonds ]
+;  ai   aj  funct   c0         c1
+    1    2    2   gb_21
+    2    3    2   gb_21
+    3    4    2   gb_21
+    4    5    2   gb_21
+    5    6    2   gb_21
+    5    7    2   gb_21
+    6    8    2   gb_21
+    8    9    2   gb_21
+    7   10    2   gb_21
+   10   11    2   gb_21
+
+[ branches ]
+;  donor   acceptor
+       1	  0
+       0	  9
+       0	 11

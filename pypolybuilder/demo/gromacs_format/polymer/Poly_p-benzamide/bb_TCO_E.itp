@@ -1,0 +1,42 @@
+[ moleculetype ]
+; Name   nrexcl
+  TCOE      2
+
+[ atoms ]
+;  nr  type  resnr  resid  atom    cgnr  charge    mass    total_charge
+   1    O      1     TCOE    O       1    0.3100     15.9994             
+   2    C      1     TCOE    C       1   -0.5000     12.0270 AR          
+   3    C      1     TCOE    C       1    0.1900     13.0190 AR 
+   4    C      1     TCOE    C       1    0.1298     12.0270 AR                
+   5    HC     1     TCOE    H       1   -0.1298      1.0080 AR
+   6    C      1     TCOE    C       1    0.1298     14.0270 AR
+   7    HC     1     TCOE    H       1   -0.1298      1.0080 AR               
+   8    C      1     TCOE    C       1    0.1298     14.0270 AR
+   9    C      1     TCOE    C       1    0.1298     14.0270 AR
+  10    HC     1     TCOE    H       1   -0.1298      1.0080 AR                
+  11    C      1     TCOE    C       1    0.0000     13.0190 AR
+  12    HC     1     TCOE    H       1   -0.1298      1.0080 AR                
+  13    C      1     TCOE    C       1   -0.5000     12.0270 AR          
+  14    O      1     TCOE    O       1    0.3100     15.9994             
+  15    HC     1     TCOE    H       1   -0.1298      1.0080 
+
+                                    
+; total charge of the molecule:   0.000
+
+[ bonds ]
+;  ai   aj  funct   c0         c1
+    1    2      2   gb_1
+    2    3      2   gb_1
+    3    4      2   gb_1
+    4    5      2   gb_1
+    4    6      2   gb_1
+    6    7      2   gb_1
+    6    8      2   gb_1
+    3    9      2   gb_1
+    9    10     2   gb_1
+    9    11     2   gb_1
+    11   12     2   gb_1
+    8    11     2   gb_1
+    8    13     2   gb_1
+    13   14     2   gb_1
+    13   15     2   gb_1

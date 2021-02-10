@@ -1,0 +1,32 @@
+# BONDS
+H       OA      gb_1
+CH2     CH2     gb_27
+CH2     OA      gb_18
+CH2     OE      gb_18
+
+
+# ANGLES
+CH2     OA      H      ga_12
+CH2     OE      CH2    ga_15
+CH2     CH2     OA     ga_15
+CH2     CH2     OE     ga_15
+
+# IMPROPERS
+CH2     C       O       N        gi_1
+C       N       H       CH2      gi_1
+CH2     NT      CH2     CH2      gi_2
+CH2     NT      H       H        gi_2
+C       CH2     O       NT       gi_1
+
+# DIHEDRALS
+CH2     CH2     OE      CH2      gd_42,gd_43,gd_44
+#CH2     CH2     OE      CH2      D1,D2,D3
+#CH2     OE      CH2     CH2      D3*,D2*,D1*
+CH2     CH2     O       CH2      gd_42,gd_43,gd_44
+CH2     CH2     OA      H        gd_23
+#CH2     CH2     OA      H        FOO
+#H       OA      CH2     CH2      OOF
+#OE      CH2     CH2     OA       D4,D5,D6
+#OE      CH2     CH2     OE       D4,D5,D6
+OE      CH2     CH2     OA       gd_45,gd_46,gd_47
+OE      CH2     CH2     OE       gd_45,gd_46,gd_47

@@ -1,0 +1,35 @@
+[ moleculetype ]
+; Name   nrexcl
+PPIC     2
+
+[ atoms ]
+;  nr  type  resnr  resid  atom  cgnr  charge    mass    total_charge
+    1    CH2   1    PPIC      C    1    0.000  14.02700
+    2    CH2   1    PPIC      C    2    0.250  14.02700
+    3    NT    1    PPIC      N    2   -0.750  14.00670
+    4    CH2   1    PPIC      C    2    0.250  14.02700
+    5    CH2   1    PPIC      C    2    0.250  14.02700
+    6    CH2   1    PPIC      C    3    0.000  14.02700
+    7    CH2   1    PPIC      C    3    0.000  14.02700
+    8    CH2   1    PPIC      C    4    0.000  14.02700
+    9    CH2   1    PPIC      C    4    0.000  14.02700
+
+; total charge of the molecule:   0.000
+
+[ bonds ]
+;  ai   aj  funct   c0         c1
+    1    2    2   gb_21
+    2    3    2   gb_21
+    3    4    2   gb_21
+    3    5    2   gb_21
+    4    6    2   gb_21
+    6    7    2   gb_21
+    5    8    2   gb_21
+    8    9    2   gb_21
+
+[ branches ]
+;  donor   acceptor
+       0	  7
+       0	  9
+
+

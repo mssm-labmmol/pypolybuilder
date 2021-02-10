@@ -1,0 +1,61 @@
+[ moleculetype ]
+; Name   nrexcl
+CORE     2
+
+[ atoms ]
+;  nr  type  resnr  resid  atom  cgnr  charge    mass    total_charge
+    1    CH2   1    CORE      C    1    0.000  14.02700
+    2    CH2   1    CORE      C    1    0.000  14.02700
+    3    CH2   1    CORE      C    2    0.250  14.02700
+    4    NT    1    CORE      N    2   -0.750  14.00670
+    5    CH2   1    CORE      C    2    0.250  14.02700
+    6    CH2   1    CORE      C    2    0.250  14.02700
+    7    CH2   1    CORE      C    3    0.000  14.02700
+    8    CH2   1    CORE      C    3    0.000  14.02700
+    9    CH2   1    CORE      C    4    0.000  14.02700
+   10    CH2   1    CORE      C    4    0.000  14.02700
+   11    CH2   1    CORE      C    5    0.250  14.02700
+   12    NT    1    CORE      N    5   -0.750  14.00670
+   13    CH2   1    CORE      C    5    0.250  14.02700
+   14    CH2   1    CORE      C    5    0.250  14.02700
+   15    CH2   1    CORE      C    6    0.000  14.02700
+   16    CH2   1    CORE      C    6    0.000  14.02700
+   17    CH2   1    CORE      C    7    0.000  14.02700
+   18    CH2   1    CORE      C    7    0.000  14.02700 
+
+; total charge of the molecule:   0.000
+
+[ bonds ]
+;  ai   aj  funct   c0         c1
+    1    2    2   gb_21
+    2    3    2   gb_21
+    3    4    2   gb_21
+    4    5    2   gb_21
+    4    6    2   gb_21
+    5    7    2   gb_21
+    7    8    2   gb_21
+    6    9    2   gb_21
+    9   10    2   gb_21
+    1   11    2   gb_21
+   11   12    2   gb_21
+   12   13    2   gb_21
+   12   14    2   gb_21
+   13   15    2   gb_21
+   15   16    2   gb_21
+   14   17    2   gb_21
+   17   18    2   gb_21
+
+[ dihedrals ]
+;     3     2     1    11         1      gd_8          
+;     3     2     1    11         1      gd_10
+;     4     3     5     6         2      gi_2
+;     4     3     5     6         2      gi_2
+
+[ branches ]
+;  donor   acceptor
+       0	  8
+       0	 10
+       0	 16
+       0	 18
+
+

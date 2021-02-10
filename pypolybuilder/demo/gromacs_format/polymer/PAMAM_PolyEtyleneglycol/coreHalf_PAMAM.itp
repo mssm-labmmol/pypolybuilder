@@ -1,0 +1,36 @@
+[ moleculetype ]
+; Name   nrexcl
+PAMC     2
+
+[ atoms ]
+;  nr  type  resnr  resid  atom  cgnr  charge    mass    total_charge
+    1    CH2   1    PAMC      C    1    0.250  14.02700
+    2    NT    1    PAMC      N    1   -0.750  14.00670
+    3    CH2   1    PAMC      C    1    0.250  14.02700
+    4    CH2   1    PAMC      C    1    0.250  14.02700
+    5    CH2   1    PAMC      C    3    0.000  14.02700
+    6    C     1    PAMC      C    3    0.540  12.01100
+    7    O     1    PAMC      O    3   -0.540  15.99940
+    8    CH2   1    PAMC      C    4    0.000  14.02700
+    9    C     1    PAMC      C    4    0.540  12.01100
+   10    O     1    PAMC      O    4   -0.540  15.99940
+; total charge of the molecule:   0.000
+
+[ bonds ]
+;  ai   aj  funct   c0         c1
+    1    2    2   gb_21
+    2    3    2   gb_21
+    2    4    2   gb_21
+    3    5    2   gb_21
+    5    6    2   gb_21
+    6    7    2   gb_21
+    4    8    2   gb_21
+    8    9    2   gb_21
+    9   10    2   gb_21
+
+
+[ branches ]
+;  donor   acceptor
+       0	  6
+       0	  9
+

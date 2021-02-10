@@ -1,0 +1,42 @@
+[ moleculetype ]
+; Name   nrexcl
+  PPDB      2
+
+[ atoms ]
+;  nr  type  resnr  resid  atom    cgnr  charge    mass    total_charge
+    1    H      1     PPDB    H       1    0.3100      1.0080       
+    2    H      1     PPDB    H       1    0.3100      1.0080 
+    3    N      1     PPDB    N       1   -0.5000     14.0067 AR
+    4    C      1     PPDB    C       1    0.1900     13.0190 AR 
+    5    C      1     PPDB    C       2    0.1298     12.0270 AR  
+    6    HC     1     PPDB    H       2   -0.1298      1.0080 AR
+    7    C      1     PPDB    C       2    0.1298     14.0270 AR
+    8    HC     1     PPDB    H       2   -0.1298      1.0080 AR 
+    9    C      1     PPDB    C       3    0.1298     14.0270 AR
+   10    C      1     PPDB    C       2    0.1298     14.0270 AR
+   11    HC     1     PPDB    H       2   -0.1298      1.0080 AR
+   12    C      1     PPDB    C       2    0.0000     13.0190 AR
+   13    HC     1     PPDB    H       2   -0.1298      1.0080 AR
+   14    N      1     PPDB    N       3   -0.5000     14.0067 AR
+   15    H      1     PPDB    H       3    0.3100      1.0080             
+
+                                    
+; total charge of the molecule:   0.000
+
+[ bonds ]
+;  ai    aj  funct   c0      c1 
+    1    3    2   gb_1
+    2    3    2   gb_1
+    3    4    2   gb_1
+    4    5    2   gb_1
+    5    6    2   gb_1
+    5    7    2   gb_1
+    7    8    2   gb_1
+    7    9    2   gb_1
+    4    10   2   gb_1
+    10   11   2   gb_1
+    10   12   2   gb_1
+    12   13   2   gb_1
+    9    12   2   gb_1
+    9    14   2   gb_1
+    14   15   2   gb_1
