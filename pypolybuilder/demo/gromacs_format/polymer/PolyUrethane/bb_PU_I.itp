@@ -1,0 +1,82 @@
+[ moleculetype ]
+; Name   nrexcl
+  PUI      2
+
+[ atoms ]
+;  nr  type  resnr  resid  atom    cgnr  charge    mass    total_charge
+   1    C      1     PUI    C       1    0.6300     12.0110             
+   2    O      1     PUI    O       1   -0.5500     15.9994              
+   3    N      1     PUI    N       1   -0.5000     14.0067             
+   4    H      1     PUI    H       1    0.3100      1.0080             
+   5    C      1     PUI    C       2    0.1900     13.0190 AR 
+   6    C      1     PUI    C       2    0.1298     12.0270 AR                
+   7    HC     1     PUI    H       2   -0.1298      1.0080 AR
+   8    C      1     PUI    C       2    0.1298     14.0270 AR
+   9    HC     1     PUI    H       2   -0.1298      1.0080 AR               
+  10    C      1     PUI    C       2    0.1298     14.0270 AR
+  11    HC     1     PUI    H       2   -0.1298      1.0080 AR             
+  12    C      1     PUI    C       2    0.1298     14.0270 AR
+  13    HC     1     PUI    H       2   -0.1298      1.0080 AR                
+  14    C      1     PUI    C       2    0.0000     13.0190 AR
+  15    CH2    1     PUI    C       3    0.0000     14.0270 AR              
+  16    C      1     PUI    C       4    0.0000     13.0190 AR              
+  17    C      1     PUI    C       4    0.1298     12.0270 AR                
+  18    HC     1     PUI    H       4   -0.1298      1.0080 AR
+  19    C      1     PUI    C       4    0.1298     14.0270 AR
+  20    HC     1     PUI    H       4   -0.1298      1.0080 AR               
+  21    C      1     PUI    C       4    0.1298     14.0270 AR
+  22    HC     1     PUI    H       4   -0.1298      1.0080 AR             
+  23    C      1     PUI    C       4    0.1298     14.0270 AR
+  24    HC     1     PUI    H       4   -0.1298      1.0080 AR                
+  25    C      1     PUI    C       4    0.1900     13.0190 AR
+  26    N      1     PUI    N       5   -0.5000     14.0067 AR              
+  27    H      1     PUI    H       5    0.3100      1.0080             
+  28    C      1     PUI    C       5    0.6300     12.0110              
+  29    O      1     PUI    O       5   -0.5500     15.9994                
+  30    OE     1     PUI    O       5   -0.3700     15.9994                               
+  31    CH2    1     PUI    C       5    0.2900     14.0270                 
+  32    CH2    1     PUI    C       6    0.0000     14.0270            
+  33    CH2    1     PUI    C       6    0.0000     14.0270            
+  34    CH2    1     PUI    C       6    0.2900     14.0270           
+  35    OE     1     PUI    O       6   -0.3700     15.9994            
+                                    
+; total charge of the molecule:   0.000
+
+[ bonds ]
+;  ai   aj  funct   c0         c1
+   1    2     2     gb_5
+   1    3     2     gb_11
+   3    4     2     gb_2
+   3    5     2     gb_11
+   5    6     2     gb_16
+   6    7     2     gb_3
+   6    8     2     gb_16
+   8    9     2     gb_3
+   5    10    2     gb_16 
+  10    11    2     gb_3
+  10    12    2     gb_16
+  12    13    2     gb_3
+   8    14    2     gb_16
+  12    14    2     gb_16
+  14    15    2     gb_15
+  15    16    2     gb_15
+  16    17    2     gb_16
+  17    18    2     gb_3
+  17    19    2     gb_16
+  19    20    2     gb_3
+  16    21    2     gb_16
+  21    22    2     gb_3
+  21    23    2     gb_16
+  23    24    2     gb_3
+  19    25    2     gb_16
+  23    25    2     gb_16
+  25    26    2     gb_11
+  26    27    2     gb_2
+  26    28    2     gb_11
+  28    29    2     gb_5
+  28    30    2     gb_13
+  30    31    2     gb_18
+  31    32    2     gb_27
+  32    33    2     gb_27
+  33    34    2     gb_27
+  34    35    2     gb_18

@@ -1,0 +1,15 @@
+[ moleculetype ]
+; Name   nrexcl
+ter_etyleneglycol     2
+
+[ atoms ]
+;  nr  type  resnr  resid  atom  cgnr  charge    mass    total_charge
+    1    CH2   1    POL       C    1    0.250  14.02700
+    2    O     1    POL       O    1   -0.250  15.99940
+    3    H     1    POL       C    1    0.000  1
+; total charge of the molecule:   0.000
+
+[ bonds ]
+;  ai   aj  funct   c0         c1
+    1    2    2   gb_21
+    2    3    2   gb_21
