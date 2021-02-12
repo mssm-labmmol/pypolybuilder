@@ -1,7 +1,14 @@
 #This will create a PAMAM/PPI PPI-cored dendrimer of generation 1
 
 #1 - Create a half of the final dendrimer
-python3 ../../../../__main__.py --core=core_PAMAM.itp --inter=inter_PAMAM.itp --ter=ter_PAMAM.itp --params=list_param.itp --ngen=1 --name=PAMH --output=PAMAMhalf.itp --nogeom
+python3 ../../../../__main__.py --core=core_PAMAM.itp \
+                                --inter=inter_PAMAM.itp \
+                                --ter=ter_PAMAM.itp \
+                                --params=list_param.itp \
+                                --ngen=1 \
+                                --name=PAMH \
+                                --output=PAMAMhalf.out.itp \
+                                --nogeom
    
 #2 - So open the PAMAMhalf.itp that was created, and add the [ branches ] field at the end of file as:
 
@@ -19,11 +26,18 @@ echo "
        0    10
        0    13
 ;       0     16
-;       0     19" >> PAMAMhalf.itp
+;       0     19" >> PAMAMhalf.out.itp
 
 
 
 #3 - Branch the other half
-python3 ../../../../__main__.py --core=PAMAMhalf.itp --inter=inter_PPI.itp --ter=ter_PPI.itp --params=list_param.itp --ngen=1 --name=PAMPPI --output=PAMAM_PPI.itp --gro=PAMAM_PPI.gro
+python3 ../../../../__main__.py --core=PAMAMhalf.itp \
+                                --inter=inter_PPI.itp \
+                                --ter=ter_PPI.itp \
+                                --params=list_param.itp \
+                                --ngen=1 \
+                                --name=PAMPPI \
+                                --output=PAMAM_PPI.out.itp \
+                                --gro=PAMAM_PPI.out.gro
 
 

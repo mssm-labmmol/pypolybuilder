@@ -6,7 +6,7 @@ HERE=`pwd`
 PROGRAM=/home/kyam/Programs/gromacs-2018.8/install/bin/gmx_mpi
 WORKDIR=${HERE}/tmp_$$
 
-CASE=PAMAM
+CASE=PAMAM.out
 
 TOPO=${WORKDIR}/${CASE}.top
 MDP=${HERE}/mdp

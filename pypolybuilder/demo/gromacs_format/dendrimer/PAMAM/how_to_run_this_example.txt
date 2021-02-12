@@ -6,6 +6,6 @@ python3 ../../../../__main__.py --core=core_PAMAM.itp \
                                 --params=list_param.itp \
                                 --ngen=1 \
                                 --name=PAMAM \
-                                --output=PAMAM.itp \
-                                --gro=PAMAM.gro \
+                                --output=PAMAM.out.itp \
+                                --gro=PAMAM.out.gro \
                                 --gromacs

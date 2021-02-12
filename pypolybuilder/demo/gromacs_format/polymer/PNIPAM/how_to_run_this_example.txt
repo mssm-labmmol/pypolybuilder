@@ -1,3 +1,9 @@
 #This will create a polymer of generation 0
 
-python3 ../../../../__main__.py --bbs=bb_PNIP-start.itp,bb_PNIP.itp,bb_PNIP-end.itp --in=connect-5.in --params=list_param.itp --name=PNIPAM --output=PNIPAM.itp --gro=PNIPAM.gro --polymer
+python3 ../../../../__main__.py --bbs=bb_PNIP-start.itp,bb_PNIP.itp,bb_PNIP-end.itp \
+                                --in=connect-5.in \
+                                --params=list_param.itp \
+                                --name=PNIPAM \
+                                --output=PNIPAM.out.itp \
+                                --gro=PNIPAM.out.gro \
+                                --polymer

@@ -6,7 +6,7 @@
 ;PU             2
 
 ; Include Pamam topology
-#include "PU3x.itp"
+#include "PU3x.out.itp"
 
 ; Include water topology
 #include "../../../../../../gromos2016h66.ff/spc.itp"

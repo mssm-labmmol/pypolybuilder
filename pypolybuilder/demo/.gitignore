@@ -1,1 +1,2 @@
-**/run/*.itp
+**/run/tmp*
+**/*.out.*

@@ -5,7 +5,7 @@
 ; Name            nrexcl
 ;SPL7013             2
 
-#include "SPL.itp"
+#include "SPL.out.itp"
 
 ; Include water topology
 #include "../../../../../../gromos2016h66.ff/spc.itp"

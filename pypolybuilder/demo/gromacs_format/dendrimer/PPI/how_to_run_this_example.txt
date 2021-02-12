@@ -1,5 +1,12 @@
 #This will create a PPI dendrimer of generation 1
 
 
-python3 ../../../../__main__.py --core=core_PPI.itp --inter=inter_PPI.itp --ter=ter_PPI.itp --params=list_param.itp --ngen=1 --name=PPI --output=PPI.itp --gro=PPI.gro
+python3 ../../../../__main__.py --core=core_PPI.itp \
+                                --inter=inter_PPI.itp \
+                                --ter=ter_PPI.itp \
+                                --params=list_param.itp \
+                                --ngen=1 \
+                                --name=PPI \
+                                --output=PPI.out.itp \
+                                --gro=PPI.out.gro
 

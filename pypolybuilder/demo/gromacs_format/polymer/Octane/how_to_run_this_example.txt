@@ -1,4 +1,11 @@
 #;
 
-python3 ../../../../__main__.py --bbs=C3.itp,C2.itp --in=connect.in --polymer --params=list_param.itp --nsteps 5000
+python3 ../../../../__main__.py --bbs=C3.itp,C2.itp \
+                                --in=connect.in \
+                                --polymer \
+                                --params=list_param.itp \
+                                --name=OCT \
+                                --output=OCT.out.itp \
+                                --gro=OCT.out.gro \
+                                --nsteps 5000
 
