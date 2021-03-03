@@ -288,11 +288,12 @@ class Itp(object):
                     exclusions.append(int(second_neighbor.get_nr()))
                     if atom.is_aromatic():
                         for third_neighbor in second_neighbor.get_atom_list():
-                            if (third_neighbor.is_aromatic()) \
-                                and (third_neighbor not in atom.get_atom_list()) \
-                                and (third_neighbor not in neighbor.get_atom_list()):
-                                exclusions.append(int(third_neighbor.get_nr()))
-                                exclusions_14.append(int(third_neighbor.get_nr()))
+                            if all([atom.is_aromatic(), neighbor.is_aromatic(), second_neighbor.is_aromatic(), third_neighbor.is_aromatic()]):
+                                if (third_neighbor.is_aromatic()) \
+                                    and (third_neighbor not in atom.get_atom_list()) \
+                                    and (third_neighbor not in neighbor.get_atom_list()):
+                                    exclusions.append(int(third_neighbor.get_nr()))
+                                    exclusions_14.append(int(third_neighbor.get_nr()))
                     
             exclusions = exclusions + atom.get_exclusion_list()
             exclusion_list = Exclusions(list(set(exclusions)), list(set(exclusions_14)))
@@ -311,11 +312,11 @@ class Itp(object):
                     if (second_neighbor.get_nr() == atom.get_nr()): continue
                     for third_neighbor in second_neighbor.get_atom_list():
                         if (third_neighbor.get_nr() == neighbor.get_nr()): continue
-                        if (not atom.is_aromatic()) or (not third_neighbor.is_aromatic()):
+                        if not all([atom.is_aromatic(), neighbor.is_aromatic(), second_neighbor.is_aromatic(), third_neighbor.is_aromatic()]):
                             pairs.append(int(third_neighbor.get_nr()))
             
-            if set(pairs):
-                print(atom.get_nr(), set(pairs))
+            # if set(pairs):
+            #     print(atom.get_nr(), set(pairs))
             atom.set_pairs14_list(set(pairs))
     
     def createDihedral(self, bond_list, x, y, z, dihedral_list):

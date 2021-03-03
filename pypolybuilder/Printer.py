@@ -84,7 +84,7 @@ class Printer(object):
             f.write("[ pairs ]\n")
             for atom in top.get_atom_list():
                 for j in atom.get_pairs14_list(): #
-                    f.write(str(atom.get_nr()) + "   " + str(j) + "\n")    #
+                    f.write(str(atom.get_nr()) + "   " + str(j) + "  1\n")    #
             f.write("\n")
                 
         # f.close()
