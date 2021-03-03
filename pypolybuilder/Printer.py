@@ -24,7 +24,10 @@ class Printer(object):
         with open(output_filename, 'w') as f:
             f.write("[ moleculetype ]\n")
             f.write("; Name   nrexcl\n")
-            f.write(name + "    2\n\n")
+            # if gromos FF:                   # 
+            f.write(name + "    3\n\n") #
+            # else:                           #
+            #     f.write(name + "    2\n\n") #
             f.write("[ atoms ]\n")
             f.write(";  nr  type  resnr  resid  atom  cgnr  charge    mass    total_charge\n")
 
@@ -75,6 +78,14 @@ class Printer(object):
             for atom in top.get_atom_list():
                 for j in atom.get_exclusion_extra().get_exclusion_extra():
                     f.write(str(atom.get_nr()) + "   " + str(j) + "\n")
+            f.write("\n")
+
+            #if gromos FF
+            f.write("[ pairs ]\n")
+            for atom in top.get_atom_list():
+                for j in atom.get_pairs14_list(): #
+                    f.write(str(atom.get_nr()) + "   " + str(j) + "  1\n")    #
+            f.write("\n")
                 
         # f.close()
 

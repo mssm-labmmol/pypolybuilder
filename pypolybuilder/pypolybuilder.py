@@ -49,6 +49,7 @@ def main():
         bond.get_a_2().get_atom_list().append(bond.get_other_atom(bond.get_a_2()))
 
     top.generate_exclusions()
+    top.generate_pairs14()
     # catch recursion error of deepcopy
     if len(top.get_atom_list()) > 1000:
         print("You are building a very large structure!\nYour topology will include {} atoms.\n"
