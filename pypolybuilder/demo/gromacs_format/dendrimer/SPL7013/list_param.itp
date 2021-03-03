@@ -1,0 +1,198 @@
+# BONDS
+H       N       gb_2
+H       NT      gb_2
+HC      C       gb_3     
+C       O       gb_5
+C       NT      gb_9
+C       N       gb_10    
+CH2     C       gb_27     
+CH2     CH2     gb_27
+CH2     N       gb_21
+CH2     NT      gb_21
+H       O       gb_1
+O       H       gb_1
+CH2     O       gb_18
+O       CH2     gb_18
+S       O       gb_25
+S       OA      gb_25
+H       OA      gb_1
+S       C       gb_32
+C       HC      gb_3
+C       S       gb_32
+C       O       gb_5
+C       OE      gb_13
+C       CH1     gb_27
+C       CH2     gb_27
+C       C       gb_16
+NT      C       gb_9
+NT      CH1     gb_21
+NT      CH2     gb_21
+
+# ANGLES
+H       NT      CH2     ga_11
+H       NT      H       ga_10
+CH2     CH2     CH2     ga_15
+CH2     CH2     C       ga_15
+CH2     CH2     NT      ga_15
+CH2     CH2     N       ga_15
+CH2     NT      CH2     ga_15
+N       CH2     C       ga_13
+CH2     C       O       ga_30
+CH2     C       N       ga_19
+O       C       N       ga_33
+H       N       C       ga_32
+CH2     N       C       ga_31
+H       N       CH2     ga_18
+CH2     CH2     O       ga_15
+CH2     O       CH2     ga_22
+H       O       CH2     ga_10
+CH2     O       H       ga_10
+CH2     N       CH2     ga_21
+CH2     C       NT      ga_25
+O       C       NT      ga_25
+NT      CH1     C       ga_15
+CH1     C       HC      ga_25
+CH1     C       C       ga_25
+C       CH1     C       ga_15
+HC      C       C       ga_25
+C       C       HC      ga_25
+C       C       C       ga_25
+CH2     OE      C       ga_15
+OE      C       C       ga_25
+C       C       S       ga_25
+C       S       O       ga_16
+C       S       OA      ga_16
+S       C       C       ga_15
+O       S       O       ga_14
+O       S       OA      ga_14
+S       OA      H       ga_12
+NT      CH2     C       ga_15
+H       NT      C       ga_15
+CH2     C       C       ga_15
+O       C       C       ga_15
+C       C       O       ga_15
+C       C       CH2     ga_15
+H       NT      CH1     ga_11
+CH1     NT      C       ga_15
+NT      C       CH1     ga_15
+C       NT      CH1     ga_15
+C       CH1     NT      ga_15
+O       C       CH1     ga_15
+C       CH1     CH2     ga_15
+CH1     NT      H       ga_11
+NT      CH1     CH2     ga_15
+CH1     NT      C       ga_15
+CH1     CH2     CH2     ga_15
+CH2     NT      C       ga_15
+C       CH2     OE      ga_15
+ 
+
+# IMPROPERS
+CH2     C       O       N        gi_1
+C       N       H       CH2      gi_1
+C       CH2     O       NT       gi_1
+C       C       C       OE       gi_1
+C       C       HC      C        gi_1
+C       C       S       C        gi_1
+NT      CH2     H       C        gi_1
+CH1     NT      C       C        gi_2
+C       NT      O       CH1      gi_1
+CH1     C       NT      CH2      gi_2
+NT      H       CH1     C        gi_1
+NT      CH1     H       C        gi_1
+
+
+# DIHEDRALS
+CH2     CH2     C       O        gd_40
+CH2     CH2     C       N        gd_40
+CH2     C       N       CH2      gd_14
+CH2     C       N       H        gd_14
+O       C       N       CH2      gd_14
+O       C       N       H        gd_14
+C       N       CH2     CH2      gd_39
+CH2     CH2     CH2     NT       gd_34
+CH2     CH2     NT      CH2      gd_34
+CH2     NT      CH2     CH2      gd_34
+NT      CH2     CH2     NT       gd_34
+NT      CH2     CH2     N        gd_34
+NT      CH2     CH2     C        gd_34
+CH2     CH2     NT      H        gd_29
+CH2     CH2     N       H        gd_39
+O       CH2     CH2     O        gd_35
+CH2     CH2     O       H        gd_30
+CH2     CH2     O       CH2      gd_43
+CH2     O       CH2     CH2      gd_43
+CH2     CH2     CH2     CH2      gd_9
+CH2     CH2     N       CH2      gd_39
+CH2     N       CH2     CH2      gd_39
+N       CH2     CH2     CH2      gd_34
+CH2     CH2     CH2     N        gd_34
+CH2     CH2     CH2     O        gd_1
+O       CH2     CH2     CH2      gd_1
+O       CH2     CH2     NT       gd_4
+NT      CH2     CH2     O        gd_4
+N       CH2     CH2     O        gd_4
+O       CH2     CH2     N        gd_4
+CH2     C       NT      CH2      gd_9 
+CH2     CH2     NT      C        gd_9
+C       NT      CH2     CH2      gd_9
+HC      C       CH1     NT       gd_40
+NT      CH1     C       HC       gd_40
+CH1     C       C       HC       gd_10
+C       C       C       HC       gd_10
+OE      CH2     C       O        gd_40
+O       C       CH2     OE       gd_40
+C       OE      CH2     C        gd_13
+C       CH2     OE      C        gd_13
+C       C       OE      CH2      gd_11
+CH2     OE      C       C        gd_11
+;C       C       C       OE       gd_10 #benzene torsionals
+;OE      C       C       C        gd_10
+;C       C       C       S        gd_10
+;H       C       C       S        gd_10
+;HC      C       C       S        gd_10
+;HC      C       C       HC       gd_10
+;C       C       C       CH1      gd_10
+;C       C       C       C        gd_10
+;C       C       C       S        gd_10
+O       S       C       C        gd_26
+OA      S       C       C        gd_26
+C       S       C       C        gd_26
+C       S       OA      H        gd_22
+C       S       OA      H        gd_22
+O       S       OA      H        gd_22
+C       CH1     NT      NT       gd_34
+C       CH1     NT      C        gd_34
+CH2     CH1     NT      H        gd_34
+C       CH1     C       C        gd_34
+NT      NT      CH1     C        gd_34
+;CH2     C       C       O        gd_10
+NT      NT      CH2     CH2      gd_34
+CH2     NT      C       O        gd_34
+NT      C       CH2     OE       gd_40
+C       C       CH2     OE       gd_40
+CH2     NT      C       O        gd_34
+NT      C       CH2     OE       gd_40
+C       C       CH2     OE       gd_40
+C       C       CH1     NT       gd_40
+NT      CH1     C       C        gd_40
+CH2     C       NT      H        gd_34
+H       NT      CH1     C        gd_34
+H       NT      C       O        gd_34
+H       NT      CH1     C        gd_34
+C       CH1     NT      H        gd_34
+C       CH1     CH2     CH2      gd_9
+NT      CH1     CH2     CH2      gd_9
+NT      C       CH1     NT       gd_40
+NT      CH1     C       O        gd_40
+O       C       CH1     NT       gd_40
+CH2     CH2     CH2     CH1      gd_9
+CH1     CH2     CH2     CH2      gd_9
+CH1     NT      C       O        gd_14
+
+
+# CONFORMATION
+CH2 C   N   CH2 trans
+CH2 C   N   H   cis
+O   C   N   CH2 cis
+O   C   N   H   trans

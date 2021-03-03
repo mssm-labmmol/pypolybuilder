@@ -6,7 +6,7 @@
 ;PAMAM_PolyEtyleneglycol             2
 
 ; Include Pamam topology
-#include "PAMAM_PEG.itp"
+#include "PAMAM_PEG.out.itp"
 
 ; Include water topology
 #include "../../../../../../gromos2016h66.ff/spc.itp"

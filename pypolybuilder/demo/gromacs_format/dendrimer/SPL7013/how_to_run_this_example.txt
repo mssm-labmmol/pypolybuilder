@@ -1,4 +1,18 @@
 #This will create a PAMAM dendrimer of generation 1
 
-python3 ../../../../__main__.py --core=core_BDA.itp --inter=inter_LYS.itp --ter=ter_NDSA.itp --params=list_param.itp --ngen=1 --name=SPL --output=SPL.itp --gro=SPL.gro --nsteps=5000 --nskipLJ=100 --gromacs --stepLength=0.0001 --forcefiel=../../../../gromos2016h66.ff
+python3 ../../../../__main__.py --core=core_BDA.itp \
+                                --inter=inter_LYS.itp \
+                                --ter=ter_NDSA.itp \
+                                --params=list_param.itp \
+                                --ngen=1 \
+                                --name=SPL \
+                                --output=SPL.out.itp \
+                                --gro=SPL.out.gro \
+                                --ngenga=50 \
+                                --npop=50 \
+                                --nsteps=5000 \
+                                --nskipLJ=0 \
+                                --gromacs \
+                                --stepLength=0.0001 \
+                                --forcefield=../../../../gromos2016h66.ff
 

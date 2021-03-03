@@ -1,0 +1,60 @@
+[ moleculetype ]
+; Name   nrexcl
+CORE     2
+
+[ atoms ]
+;  nr  type  resnr  resid  atom  cgnr  charge    mass    total_charge
+    1    CH2   1    CORE      C    1    0.185  14.02700
+    2    NT    1    CORE      N    1   -0.865  14.00670
+    3    H     1    CORE      H    1    0.310   1.00800
+    4    CH2   1    CORE      C    1    0.185  14.02700
+    5    CH2   1    CORE      C    1    0.185  14.02700
+    6    CH2   1    CORE      C    2    0.000  14.02700
+    7    C     1    CORE      C    2    0.540  12.01100
+    8    O     1    CORE      O    2   -0.540  15.99940
+    9    CH2   1    CORE      C    3    0.000  14.02700
+   10    C     1    CORE      C    3    0.540  12.01100
+   11    O     1    CORE      O    3   -0.540  15.99940
+   12    CH2   1    CORE      C    4    0.185  14.02700
+   13    NT    1    CORE      N    4   -0.865  14.00670
+   14    H     1    CORE      H    4    0.310   1.00800
+   15    CH2   1    CORE      C    4    0.185  14.02700
+   16    CH2   1    CORE      C    4    0.185  14.02700
+   17    CH2   1    CORE      C    5    0.000  14.02700
+   18    C     1    CORE      C    5    0.540  12.01100
+   19    O     1    CORE      O    5   -0.540  15.99940
+   20    CH2   1    CORE      C    6    0.000  14.02700
+   21    C     1    CORE      C    6    0.540  12.01100
+   22    O     1    CORE      O    6   -0.540  15.99940
+; total charge of the molecule:   2.000
+
+[ bonds ]
+;  ai   aj  funct   c0         c1
+    1    2    2   gb_21
+    2    3    2   gb_21
+    2    4    2   gb_21
+    2    5    2   gb_21
+    4    6    2   gb_21
+    6    7    2   gb_21
+    7    8    2   gb_21
+    5    9    2   gb_21
+    9   10    2   gb_21
+   10   11    2   gb_21
+    1   12    2   gb_21
+   12   13    2   gb_21
+   13   14    2   gb_21
+   13   15    2   gb_21
+   13   16    2   gb_21
+   15   17    2   gb_21
+   17   18    2   gb_21
+   18   19    2   gb_21
+   16   20    2   gb_21
+   20   21    2   gb_21
+   21   22    2   gb_21
+
+[ branches ]
+;  donor   acceptor
+       0	  7
+       0	 10
+       0	 18
+       0	 21

@@ -1,0 +1,35 @@
+# BONDS
+N   C   gb_11
+C   C   gb_16
+N   H   gb_2
+C   O   gb_5
+C   HC  gb_3
+
+# ANGLES
+H   N   H   ga_11
+H   N   C   ga_32
+N   N   C   ga_22
+C   N   C   ga_22
+C   C   O   ga_19
+C   C   N   ga_19
+C   C   C   ga_27
+C   C   HC  ga_25
+N   N   H   ga_32
+N   C   O   ga_33
+O   C   HC  ga_25
+
+# IMPROPERS
+C   C   O   N   gi_1
+C   C   C   HC  gi_1
+C   C   C   N   gi_1
+C   C   C   C   gi_1
+
+# DIHEDRALS
+C   C   C   C   gd_22;
+HC  C   C   C   gd_22;
+HC  C   C   HC  gd_22;
+C   C   C   O   gd_10
+C   C   C   N   gd_10
+C   C   N   H   gd_14
+N   C   C   HC  gd_10
+C   N   C   C   gd_14

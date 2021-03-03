@@ -1,0 +1,63 @@
+# BONDS
+C    OE    gb_13
+
+
+# ANGLES
+CH2    OE     H      ga_8
+CH2    OA     H      ga_12
+CH2    CH2    OA     ga_15
+CH2    CH2    CH2    ga_15
+C      C      C      ga_27
+C      C      N      ga_25
+C      N      H      ga_32
+C      C      H      ga_25
+C      CH2    C      ga_13
+C      N      C      ga_25
+HC     C      C      ga_25
+C      C      CH2    ga_25
+OE     CH2    CH2    ga_15
+C      OE     CH2    ga_22
+O      C      N      ga_33
+N      C      OE     ga_33
+O      C      OE     ga_31
+H     C      O      ga_25
+H     C      N      ga_25
+HC     C      O      ga_25
+HC     C      N      ga_25
+
+# IMPROPERS
+C      N       O      OE    gi_1
+N      C       H      C     gi_1
+C      C       HC     C     gi_1
+C      C       C      CH2   gi_1
+C      H       O      N     gi_1
+
+# DIHEDRALS
+CH2     CH2    OE      H          gd_8
+CH2     CH2    OA      H          gd_23
+H       OA     CH2     CH2        gd_23
+CH2     CH2    CH2     OA         gd_34 
+CH2     CH2    CH2     OE         gd_34
+C       N      C       O          gd_14  
+C       C      N       H          gd_14
+;HC      C      C       N          gd_33   
+H       N      C       O          gd_14  
+HC      N      C       O          gd_14  
+HC      C      N       O          gd_14  
+HC      C      N       C          gd_8
+HC      C      N       H          gd_8
+C       C      C       N          gd_10
+C       N      C       C          gd_14 
+C       C      CH2     C          gd_40 
+;HC      C      C       CH2        gd_33
+CH2     CH2    CH2     CH2        gd_34
+O       C      OE      C          gd_12
+H       C      N       H          gd_14
+N       C      OE      CH2        gd_12
+CH2     CH2    OE      C          gd_42  
+O       C       OE      CH2       gd_12
+C       C       C       CH2       gd_10
+OE      C       N       H         gd_14
+;HC      C      C       HC         gd_33
+;C       C      C       C          gd_10  
+;C       C      C       HC         gd_33

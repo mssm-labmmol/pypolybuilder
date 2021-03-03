@@ -1,0 +1,8 @@
+[ moleculetype ]
+; Name nrexcl
+C3   2
+
+[ atoms ]
+;   nr  type  resnr  resid  atom   cgnr  charge    mass    total_charge
+     1   CH3      1    OCT     C      1       0  15.00
+

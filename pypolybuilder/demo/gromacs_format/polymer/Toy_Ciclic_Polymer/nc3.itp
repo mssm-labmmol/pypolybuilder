@@ -1,0 +1,18 @@
+[ moleculetype ]
+; Name   nrexcl
+nc3     2
+
+[ atoms ]
+;  nr  type  resnr  resid  atom  cgnr  charge    mass    total_charge
+    1    N     1     POL     N    1    0.750    88
+    2    CH2   1     POL     C    1    0.250    14.02700
+    3    CH2   1     POL     C    1    0.250    14.02700
+    4    CH2   1     POL     C    1    0.250    14.02700
+; total charge of the molecule:   0.000
+
+[ bonds ]
+;  ai   aj  funct   c0         c1
+    1    2    2   gb_21
+    1    3    2   gb_21
+    1    4    2   gb_21
+

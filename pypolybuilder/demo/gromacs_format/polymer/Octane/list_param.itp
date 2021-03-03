@@ -1,0 +1,14 @@
+# BONDS
+CH2     CH2     gb_27
+CH3     CH2     gb_21
+
+# ANGLES
+CH2     CH2     CH2     ga_15
+CH2     CH2     CH3     ga_15
+
+# IMPROPERS
+
+# DIHEDRALS
+CH2     CH2     CH2     CH2      gd_34
+CH2     CH2     CH2     CH3      gd_34
+CH3     CH2     CH2     CH3      gd_34

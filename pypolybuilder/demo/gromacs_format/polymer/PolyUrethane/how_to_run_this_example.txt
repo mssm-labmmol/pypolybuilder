@@ -1,3 +1,9 @@
 #This will create a polymer with 3 monomers
 
-python3 ../../../../__main__.py --bbs=bb_PU_B.itp,bb_PU_I.itp,bb_PU_E.itp --in=connect-3.in --params=list_param.itp --name=PU --output=PU3x.itp --gro=PU3x.gro --polymer
+python3 ../../../../__main__.py --bbs=bb_PU_B.itp,bb_PU_I.itp,bb_PU_E.itp \
+                                --in=connect-3.in \
+                                --params=list_param.itp \
+                                --name=PU \
+                                --output=PU3x.out.itp \
+                                --gro=PU3x.out.gro \
+                                --polymer

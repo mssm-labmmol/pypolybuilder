@@ -8,7 +8,7 @@ PROGRAM=/home/kyam/Programs/gromacs-2018.8/install/bin/gmx_mpi
 #PROGRAM=/usr/local/gromacs-514/bin/gmx_514
 WORKDIR=${HERE}/tmp_$$
 
-CASE=PAMAM_PPI
+CASE=PAMAM_PPI.out
 
 TOPO=${WORKDIR}/${CASE}.top
 MDP=${HERE}/mdp

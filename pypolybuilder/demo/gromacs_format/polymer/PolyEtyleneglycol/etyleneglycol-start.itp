@@ -1,0 +1,17 @@
+[ moleculetype ]
+; Name   nrexcl
+EGS     2
+
+[ atoms ]
+;  nr  type  resnr  resid  atom  cgnr  charge    mass    total_charge
+    1    H     1    POL       H    1    0.410  1.0000
+    2    OA    1    POL       O    1   -0.700  15.99940
+    3    CH2   1    POL       C    1    0.290  14.02700
+    
+; total charge of the molecule:   0.000
+
+[ bonds ]
+;  ai   aj  funct   c0         c1
+    1    2    2   gb_1
+    2    3    2   gb_18
+

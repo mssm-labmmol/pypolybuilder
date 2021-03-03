@@ -1,0 +1,74 @@
+# BONDS
+H       N       gb_2
+H       NT      gb_2
+HC      C       gb_3     
+C       O       gb_5
+C       NT      gb_9
+C       N       gb_10    
+CH2     C       gb_27     
+CH2     CH2     gb_27
+CH2     N       gb_21
+CH2     NT      gb_21
+H       O       gb_1
+O       H       gb_1
+CH2     O       gb_18
+O       CH2     gb_18
+
+# ANGLES
+H       NT      CH2     ga_11
+H       NT      H       ga_10
+CH2     CH2     CH2     ga_15
+CH2     CH2     C       ga_15
+CH2     CH2     NT      ga_15
+CH2     CH2     N       ga_15
+CH2     NT      CH2     ga_15
+N       CH2     C       ga_13
+CH2     C       O       ga_30
+CH2     C       N       ga_19
+O       C       N       ga_33
+H       N       C       ga_32
+CH2     N       C       ga_31
+H       N       CH2     ga_18
+CH2     CH2     O       ga_15
+CH2     O       CH2     ga_22
+H       O       CH2     ga_10 #conferir
+CH2     O       H       ga_10
+CH2     N       CH2     ga_21
+
+# IMPROPERS
+CH2     C       O       N        gi_1
+C       N       H       CH2      gi_1
+CH2     NT      CH2     CH2      gi_2
+CH2     NT      H       H        gi_2
+
+# DIHEDRALS
+CH2     CH2     C       O        gd_40
+CH2     CH2     C       N        gd_40
+CH2     C       N       CH2      gd_14
+CH2     C       N       H        gd_14
+O       C       N       CH2      gd_14
+O       C       N       H        gd_14
+C       N       CH2     CH2      gd_39
+CH2     CH2     CH2     NT       gd_34
+CH2     CH2     NT      CH2      gd_34
+CH2     NT      CH2     CH2      gd_34
+NT      CH2     CH2     NT       gd_34
+NT      CH2     CH2     N        gd_34
+NT      CH2     CH2     C        gd_34
+CH2     CH2     NT      H        gd_29
+CH2     CH2     N       H        gd_39
+O       CH2     CH2     O        gd_35
+CH2     CH2     O       H        gd_30
+CH2     CH2     O       CH2      gd_43
+CH2     O       CH2     CH2      gd_43
+CH2     CH2     CH2     CH2      gd_9
+CH2     CH2     N       CH2      gd_39
+CH2     N       CH2     CH2      gd_39
+N       CH2     CH2     CH2      gd_34
+CH2     CH2     CH2     N        gd_34
+CH2     CH2     CH2     O        gd_1
+O       CH2     CH2     CH2      gd_1
+O       CH2     CH2     NT       gd_4
+NT      CH2     CH2     O        gd_4
+N       CH2     CH2     O        gd_4
+O       CH2     CH2     N        gd_4
