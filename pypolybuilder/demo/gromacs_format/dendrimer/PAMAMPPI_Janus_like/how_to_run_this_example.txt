@@ -31,7 +31,7 @@ echo "
 
 
 #3 - Branch the other half
-python3 ../../../../__main__.py --core=PAMAMhalf.itp \
+python3 ../../../../__main__.py --core=PAMAMhalf.out.itp \
                                 --inter=inter_PPI.itp \
                                 --ter=ter_PPI.itp \
                                 --params=list_param.itp \
