@@ -19,12 +19,14 @@ import Dihedral
 from Polymer import Polymer
 from Utils import unit_vector, deg_to_rad
 from Utils import vectorFromAtoms
-from vbga import VBGA, calcSphericity, RoulettSelectionMethod, AritmeticCrossoverMethod, DefaultMutation
+#from vbga import VBGA, calcSphericity, RoulettSelectionMethod, AritmeticCrossoverMethod, DefaultMutation
 from scipy.spatial import distance
 from Utils import ngenga, npop
 from Utils import debug as DEBUG, print_pypoly_warning
 from Utils import verbose as args_verbose
 from pypoly_io import quitError
+from PSO import PSO
+import pandas as pd
 
 
 Matrix = None
@@ -571,14 +573,65 @@ class TorsionOpt(object):
         if DEBUG:
             Matrix.printDebugMatrix()
 
-        myGA = VBGA(Individual, calcSphericity, RoulettSelectionMethod, AritmeticCrossoverMethod, crossoverRate=80.0,
+        '''myGA = VBGA(Individual, calcSphericity, RoulettSelectionMethod, AritmeticCrossoverMethod, crossoverRate=80.0,
                     mutationMethod=DefaultMutation, mutationRate=20.0, populationSize=npop)
 
         print("\nPerforming optimization by genetic algorithm: "
               "Generation number = {}; Population = {}\nThis may take a while...\n".format(ngenga,npop))
         myGA.run(ngenga)
 
-        xyz = myGA.getBest().matrix.converToXYZ()
+        xyz = myGA.getBest().matrix.converToXYZ()'''
+        count = 0
+        for i in range(0, len(g)):
+            if g[i] == 'NULL':
+                count += 1
+
+        def calcSphericity(individual):
+            MatrixEvaluate = copy.deepcopy(Matrix)
+            j = 0
+            for i in range(0, len(g)):
+                if g[i] == 'NULL':
+                    MatrixEvaluate.dihvalue[i] = individual[j]
+                    j += 1
+            natoms = len(MatrixEvaluate.atoms)
+            xyzarr = MatrixEvaluate.converToXYZ()
+            x, y, z = 0.0, 0.0, 0.0
+            for i in range(natoms):
+                x += xyzarr[i][0]
+                y += xyzarr[i][1]
+                z += xyzarr[i][2]
+            centerOfGeom = np.array([x, y, z]) / float(natoms)
+
+            df = pd.DataFrame({'x': xyzarr[:, 0], 'y': xyzarr[:, 1], 'z': xyzarr[:, 2]})
+            rX = 2 * df['x'].std()
+            rY = 2 * df['y'].std()
+            rZ = 2 * df['z'].std()
+
+            w = [1, 1, 1]
+
+            sphericity = ((rX * rY * rZ) ** (1 / 3)) / max([rX / w[0], rY / w[1], rZ / w[2]]) * 10
+            rcum = 0.0
+            for i in range(natoms):
+                rcum += np.linalg.norm(xyzarr[i] - centerOfGeom)
+            return (rcum / natoms) * sphericity,
+
+        import random
+        param = [177, 248, 180, 197, 7.91, 3.45, 6.78024326809281]
+        myGA = PSO(calcSphericity, indSize=count, weight=(1.0,), popSize=int(npop), rangeGen=[param[0], param[1]],
+                   smin=param[2], smax=param[3], phi1=param[4], phi2=param[5])
+
+        hof, fit = myGA.run(ngenga)
+        print("\n Fitness after the global optimize:",fit)
+        # sys.exit()
+
+        bestMatrix = copy.deepcopy(Matrix)
+        j = 0
+
+        for i in range(0, len(g)):
+            if bestMatrix.dihvalue[i] == 'NULL':
+                bestMatrix.dihvalue[i] = hof[j]
+                j += 1
+        xyz = bestMatrix.converToXYZ()
         self.addXYZtoTOP(xyz)
 
 

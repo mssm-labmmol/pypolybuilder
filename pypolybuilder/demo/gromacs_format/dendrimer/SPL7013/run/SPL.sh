@@ -3,18 +3,19 @@
 # Here we define some important variables.
 
 HERE=`pwd`
-PROGRAM=/home/mayk/programs/gromacs-2019.6/install/bin/gmx_mpi
+PROGRAM=`which gmx_mpi`
+#PROGRAM=/home/mayk/programs/gromacs-2019.6/install/bin/gmx_mpi
 WORKDIR=${HERE}/tmp_$$
 
-CASE=SPL.out
+CASE=SPL
 
 TOPO=${WORKDIR}/${CASE}.top
 MDP=${HERE}/mdp
 
 mkdir ${WORKDIR}
 cp ${HERE}/${CASE}.top ${WORKDIR}
-cp ${HERE}/SPL.itp ${WORKDIR}/${CASE}.itp
-cp ${HERE}/SPL.gro ${WORKDIR}/${CASE}.gro
+cp ${HERE}/${CASE}.itp ${WORKDIR}/${CASE}.out.itp
+cp ${HERE}/${CASE}.gro ${WORKDIR}/${CASE}.out.gro
 cd ${WORKDIR}
 
 #################### BOX ######################
