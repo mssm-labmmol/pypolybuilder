@@ -6,21 +6,21 @@ HERE=`pwd`
 PROGRAM=/home/kyam/Programs/gromacs-2018.8/install/bin/gmx_mpi
 WORKDIR=${HERE}/tmp_$$
 
-CASE=PU3x.out
+CASE=PU3x
 
 TOPO=${WORKDIR}/${CASE}.top
 MDP=${HERE}/mdp
 
 mkdir ${WORKDIR}
 cp ${HERE}/${CASE}.top ${WORKDIR}
-cp ${HERE}/${CASE}.itp ${WORKDIR}
-cp ${HERE}/${CASE}.gro ${WORKDIR}
+cp ${HERE}/${CASE}.itp ${WORKDIR}/${CASE}.out.itp
+cp ${HERE}/${CASE}.gro ${WORKDIR}/${CASE}.out.gro
 cd ${WORKDIR}
 
 #################### BOX ######################
 
 ${PROGRAM} editconf \
-	-f ${HERE}/${CASE}.gro \
+	-f ${WORKDIR}/${CASE}.gro \
 	-c \
 	-d 1.0 \
 	-bt cubic \
@@ -72,6 +72,7 @@ ${PROGRAM} grompp \
     -c ${WORKDIR}/em.gro \
     -p ${TOPO} \
     -o nvt.tpr \
+    -maxwarn 2 \
     -v
 
 ${PROGRAM} mdrun \
