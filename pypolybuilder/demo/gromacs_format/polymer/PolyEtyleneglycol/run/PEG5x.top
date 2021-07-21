@@ -6,7 +6,7 @@
 ;PEG             2
 
 ; Include Pamam topology
-#include "PEG5x.out.itp"
+#include "PEG5x.itp"
 
 ; Include water topology
 #include "../../../../../../gromos2016h66.ff/spc.itp"
