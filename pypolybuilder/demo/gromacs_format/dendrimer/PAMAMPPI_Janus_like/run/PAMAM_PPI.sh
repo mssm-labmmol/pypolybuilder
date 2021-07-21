@@ -2,26 +2,26 @@
 
 # Here we define some important variables.
 
-#HERE=/home/kyam/Programs/pypolybuilder/pypolybuilder/demo/gromacs_format/dendrimer/PAMAM/run
 HERE=`pwd`
-PROGRAM=/home/kyam/Programs/gromacs-2018.8/install/bin/gmx_mpi
-#PROGRAM=/usr/local/gromacs-514/bin/gmx_514
+PROGRAM=`which gmx_mpi`
+#PROGRAM=/home/kyam/Programs/gromacs-2018.8/install/bin/gmx_mpi
 WORKDIR=${HERE}/tmp_$$
 
-CASE=PAMAM_PPI.out
+CASE=PAMAM_PPI
 
 TOPO=${WORKDIR}/${CASE}.top
 MDP=${HERE}/mdp
 
 mkdir ${WORKDIR}
 cp ${HERE}/${CASE}.top ${WORKDIR}
-cp ${HERE}/${CASE}.itp ${WORKDIR}
+cp ${HERE}/${CASE}.itp ${WORKDIR}/${CASE}.out.itp
+cp ${HERE}/${CASE}.gro ${WORKDIR}/${CASE}.out.gro
 cd ${WORKDIR}
 
 #################### BOX ######################
 
 ${PROGRAM} editconf \
-	-f ${HERE}/${CASE}.gro \
+	-f ${WORKDIR}/${CASE}.gro \
 	-c \
 	-d 1.0 \
 	-bt cubic \
@@ -41,6 +41,7 @@ ${PROGRAM} grompp \
 	-f ${MDP}/ion.mdp \
 	-c ${WORKDIR}/solv.gro \
 	-p ${TOPO} \
+    -maxwarn 2 \
 	-o ion.tpr
 
 
@@ -71,6 +72,7 @@ ${PROGRAM} grompp \
     -f ${MDP}/nvt.mdp \
     -c ${WORKDIR}/em.gro \
     -p ${TOPO} \
+    -maxwarn 2 \
     -o nvt.tpr \
     -v
 
