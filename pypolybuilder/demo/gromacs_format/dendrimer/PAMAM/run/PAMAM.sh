@@ -6,21 +6,21 @@ HERE=`pwd`
 PROGRAM=/home/kyam/Programs/gromacs-2018.8/install/bin/gmx_mpi
 WORKDIR=${HERE}/tmp_$$
 
-CASE=PAMAM.out
+CASE=PAMAM
 
 TOPO=${WORKDIR}/${CASE}.top
 MDP=${HERE}/mdp
 
 mkdir ${WORKDIR}
 cp ${HERE}/${CASE}.top ${WORKDIR}
-cp ${HERE}/${CASE}.itp ${WORKDIR}
-cp ${HERE}/${CASE}.gro ${WORKDIR}
+cp ${HERE}/${CASE}.out.itp ${WORKDIR}/${CASE}.itp
+cp ${HERE}/${CASE}.out.gro ${WORKDIR}/${CASE}.gro
 cd ${WORKDIR}
 
 #################### BOX ######################
 
 ${PROGRAM} editconf \
-	-f ${HERE}/${CASE}.gro \
+	-f ${WORKDIR}/${CASE}.gro \
 	-c \
 	-d 1.0 \
 	-bt cubic \

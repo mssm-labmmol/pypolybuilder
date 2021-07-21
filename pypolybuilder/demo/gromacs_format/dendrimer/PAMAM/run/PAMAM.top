@@ -6,7 +6,7 @@
 ;PAMAM             2
 
 ; Include Pamam topology
-#include "PAMAM.out.itp"
+#include "PAMAM.itp"
 
 ; Include water topology
 #include "../../../../../../gromos2016h66.ff/spc.itp"

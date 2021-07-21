@@ -14,8 +14,8 @@ MDP=${HERE}/mdp
 
 mkdir ${WORKDIR}
 cp ${HERE}/${CASE}.top ${WORKDIR}
-cp ${HERE}/${CASE}.itp ${WORKDIR}/${CASE}.out.itp
-cp ${HERE}/${CASE}.gro ${WORKDIR}/${CASE}.out.gro
+cp ${HERE}/${CASE}.out.itp ${WORKDIR}/${CASE}.itp
+cp ${HERE}/${CASE}.out.gro ${WORKDIR}/${CASE}.gro
 cd ${WORKDIR}
 
 #################### BOX ######################
