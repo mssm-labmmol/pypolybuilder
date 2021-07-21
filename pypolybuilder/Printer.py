@@ -32,9 +32,21 @@ class Printer(object):
             f.write(";  nr  type  resnr  resid  atom  cgnr  charge    mass    total_charge\n")
 
             for atom in top.get_atom_list():
-                f.write("    " + str(atom.get_nr()) + "    " + str(atom.get_atomtype()) + "\t" + str(atom.get_resnr()) + "\t"
-                    + str(atom.get_resid()) + "\t" + str(atom.get_atom()) + "\t" + str(atom.get_cgnr()) + "\t"
-                    + str(atom.get_charge()) + "\t" + str(atom.get_mass()) + "\n")
+                # f.write("    " + str(atom.get_nr()) + "    " + str(atom.get_atomtype()) + "\t" + str(atom.get_resnr()) + "\t"
+                #     + str(atom.get_resid()) + "\t" + str(atom.get_atom()) + "\t" + str(atom.get_cgnr()) + "\t"
+                #     + str(atom.get_charge()) + "\t" + str(atom.get_mass()) + "\n")
+                # f.write(f"{type(atom.get_nr())} {type(atom.get_atomtype())} {type(atom.get_resnr())} {type(atom.get_resid())} {type(atom.get_atom())} {type(atom.get_cgnr())} {type(atom.get_charge())} {type(atom.get_mass())}")
+                nt=int(atom.get_nr())
+                atomType=str(atom.get_atomtype())
+                resn=int(atom.get_resnr())
+                resid=str(atom.get_resid())
+                atomName=str(atom.get_atom())
+                cgnr=int(atom.get_cgnr())
+                charge=float(atom.get_charge())
+                mass=float(atom.get_mass())
+                
+                f.write(f"{nt:>5d} {atomType:>5s} {resn:>5d} {resid:>5s} {atomName:>5s} {cgnr:>5d} {charge:>8.4f} {mass:>8.4f}")
+                f.write("\n")
 
             f.write("\n")
             f.write("[ bonds ]\n")
